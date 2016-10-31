@@ -6,12 +6,12 @@ import Foundation
 
 //MARK:- Notification's helper
 
-protocol Notificable {
+public protocol Notificable {
     /// Notification identifiers
     associatedtype NotificationIdentifier: RawRepresentable
 }
 
-extension Notificable where NotificationIdentifier.RawValue == String {
+public extension Notificable where NotificationIdentifier.RawValue == String {
     func addObserver(_ observer: AnyObject, selector: Selector, forNotification notificationIdentifier: NotificationIdentifier, object: AnyObject) {
         NotificationCenter.default.addObserver(observer, selector: selector, name: NSNotification.Name(rawValue: notificationIdentifier.rawValue), object: object)
     }

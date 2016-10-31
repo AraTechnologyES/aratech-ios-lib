@@ -7,8 +7,8 @@ import UIKit
 
 //MARK:- UIViewController
 
-extension UIViewController {
-    var contentViewController: UIViewController {
+public extension UIViewController {
+    public var contentViewController: UIViewController {
         if let navcon = self as? UINavigationController {
             return navcon.visibleViewController!
         } else {

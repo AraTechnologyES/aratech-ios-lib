@@ -6,7 +6,7 @@ import Foundation
 
 //MARK:- UINavigationController
 
-extension UINavigationController {
+public extension UINavigationController {
     
     public func presentTransparentNavigationBar() {
         navigationBar.setBackgroundImage(UIImage(), for:UIBarMetrics.default)

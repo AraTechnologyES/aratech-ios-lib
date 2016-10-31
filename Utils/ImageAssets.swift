@@ -6,7 +6,7 @@ import Foundation
 
 //MARK:- Images assets
 
-enum Icon : String {
+public enum Icon : String {
     case imageAssetName
     case CheckBox
     case CheckBoxPartial

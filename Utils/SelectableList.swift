@@ -10,7 +10,7 @@ import UIKit
 /// - partial:    Parcialmente seleccionados los elementos internos
 /// - noSelected: Ningun elemento interno seleccionado
 
-enum SelectionType {
+public enum SelectionType {
     case selected
     case partial
     case noSelected
@@ -32,7 +32,7 @@ enum SelectionType {
 }
 
 /// Protocolo que define las propiedades que debe tener un item que pueda ser seleccionable, y cuyo estado esta definido por el tipo SelectionType. Si el elemento contiene sub elementos, su estado estara definido en funcion del de estos, es decir, si todos los sub elementos estan selecionados, se considera al elemento seleccionado.
-protocol Selectable {
+public protocol Selectable {
     
     var id: String? { get }
     var name: String { get }
@@ -168,7 +168,7 @@ class SelectableListElement: Selectable {
     }
 }
 
-protocol SelectableListProtocol {
+public protocol SelectableListProtocol {
     
     var list: [Selectable] { get }
     
@@ -184,12 +184,12 @@ protocol SelectableListProtocol {
     
 }
 
-class SelectableList: SelectableListProtocol {
+public class SelectableList: SelectableListProtocol {
     
     private var elements: [Selectable]
     private var filteredElements: [Selectable]?
     
-    subscript(index: Int) -> Selectable {
+    public subscript(index: Int) -> Selectable {
         get {
             return self.list[index]
         }
@@ -201,7 +201,7 @@ class SelectableList: SelectableListProtocol {
     /// - parameter id: El id del elemento deseado
     ///
     /// - returns: El elemento cuyo id coincida
-    subscript(id: String) -> Selectable? {
+    public subscript(id: String) -> Selectable? {
         get {
             for element in self.elements {
                 if element.id == id { return element }
@@ -210,19 +210,19 @@ class SelectableList: SelectableListProtocol {
         }
     }
     
-    var list: [Selectable] {
+    public var list: [Selectable] {
         get {
             guard let filteredElements = filteredElements else { return elements }
             return filteredElements
         }
     }
     
-    init() {
+    public init() {
         self.elements = SelectableListElement.mockups
         self.filteredElements = nil
     }
     
-    init(withElements elements: [Selectable]) {
+    public init(withElements elements: [Selectable]) {
         self.elements = elements
     }
     
@@ -234,7 +234,7 @@ class SelectableList: SelectableListProtocol {
         }
     }
     
-    func childList(forIndex index: Int) -> SelectableListProtocol? {
+    public func childList(forIndex index: Int) -> SelectableListProtocol? {
         let element = self.element(forIndex: index)
         
         guard let childs = element.subComponents else { return nil }
@@ -246,7 +246,7 @@ class SelectableList: SelectableListProtocol {
     /// - parameter index: El indice del elemento seleccionado
     ///
     /// - returns: El estado del elemento tras la seleccion
-    func listElement(wasSelectedAt index: Int) -> SelectionType {
+    public func listElement(wasSelectedAt index: Int) -> SelectionType {
         
         var element = self.element(forIndex: index)
         
@@ -261,7 +261,7 @@ class SelectableList: SelectableListProtocol {
         return element.state
     }
     
-    func filterList(forSearchText text: String) {
+    public func filterList(forSearchText text: String) {
         if text != "" {
             self.filteredElements = self.elements.filter { element in
                 return element.name.lowercased().contains(text.lowercased())
