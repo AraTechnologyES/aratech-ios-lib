@@ -17,7 +17,7 @@ public enum SelectionType {
     
     
     /// La imagen que representa al estado
-    var image: UIImage {
+    public var image: UIImage {
         get {
             switch self {
             case .noSelected:
@@ -41,15 +41,15 @@ public protocol Selectable {
     var subComponents: [Selectable]? { get set }
 }
 
-class SelectableListElement: Selectable {
+public class SelectableListElement: Selectable {
     
-    var id: String?
-    var name: String
+    public var id: String?
+    public var name: String
     private var selfState: SelectionType = .noSelected
     
-    var subComponents: [Selectable]?
+    public var subComponents: [Selectable]?
     
-    var state: SelectionType {
+    public var state: SelectionType {
         get {
             return self.determineState()
         }
@@ -60,7 +60,7 @@ class SelectableListElement: Selectable {
         }
     }
     
-    init(whitName name: String, id: String? = nil, state: SelectionType, subComponents: [Selectable]? = nil) {
+    public init(whitName name: String, id: String? = nil, state: SelectionType, subComponents: [Selectable]? = nil) {
         self.id = id
         self.name = name
         self.selfState = state
