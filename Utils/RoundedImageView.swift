@@ -5,10 +5,10 @@
 import UIKit
 
 /// Inteface Builder designable `ImageView` with custom corner radius
-@IBDesignable class RoundedImageView: UIImageView {
+@IBDesignable public class RoundedImageView: UIImageView {
     
     /// If you want the `ImageView` circular, like profile image
-    @IBInspectable var circular: Bool = false {
+    @IBInspectable public var circular: Bool = false {
         didSet {
             if circular {
                 self.layer.cornerRadius = self.frame.size.height / 2
@@ -18,7 +18,7 @@ import UIKit
     }
     
     /// Custom corner radius, only if not circular
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    @IBInspectable public var cornerRadius: CGFloat = 0 {
         didSet {
             if !circular {
                 self.layer.cornerRadius = cornerRadius
