@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA63D1EF1DCCADDC000394E2 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */; };
 		EA823B801DC798A90011F74D /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA823B761DC798A80011F74D /* Utils.framework */; };
 		EA823B851DC798A90011F74D /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823B841DC798A90011F74D /* UtilsTests.swift */; };
 		EA823B871DC798A90011F74D /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA823B791DC798A80011F74D /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		EA823B761DC798A80011F74D /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA823B791DC798A80011F74D /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		EA823B7A1DC798A80011F74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA63D1F01DCCAE0C000394E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		EA823B6C1DC798A80011F74D = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				EA823B9A1DC79AA60011F74D /* Utils */,
+				EA63D1F01DCCAE0C000394E2 /* Views */,
 				EA823B931DC799B80011F74D /* Protocols */,
 				EA823B901DC7994E0011F74D /* Extensions */,
 				EA823B791DC798A80011F74D /* Utils.h */,
@@ -281,6 +292,7 @@
 				EA823BAE1DC79CB00011F74D /* SelectableList.swift in Sources */,
 				EA823BB21DC79E6E0011F74D /* Sandbox.swift in Sources */,
 				EA823BAA1DC79C690011F74D /* UITableView.swift in Sources */,
+				EA63D1EF1DCCADDC000394E2 /* RoundedImageView.swift in Sources */,
 				EA823BAC1DC79C8A0011F74D /* UICollectionView.swift in Sources */,
 				EA823B951DC79A220011F74D /* SegueHandlerType.swift in Sources */,
 				EA823BA81DC79C480011F74D /* UICollectionReusableView.swift in Sources */,
