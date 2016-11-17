@@ -8,8 +8,16 @@ import Foundation
 
 public struct Color {
     
-    /// Hex: #e41741
-    public static let red = UIColor(colorLiteralRed: 228.0/255.0, green: 23.0/255.0, blue: 65.0/255.0, alpha: 1.0)
+    public struct Red {
+        /// #FA3033
+        public static let discount = UIColor(red: 250.0/255.0, green: 48.0/255.0, blue: 51.0/255.0, alpha: 1.0)
+    }
+    
+    public struct Blue {
+        public static let facebook = UIColor(red: 44.0/255.0, green: 101.0/255.0, blue: 148.0/255.0, alpha: 1.0)
+        public static let email = UIColor(red: 52.0/255.0, green: 96.0/255.0, blue: 164.0/255.0, alpha: 1.0)
+        public static let discount = UIColor(red: 30.0/255.0, green: 230.0/255.0, blue: 129.0/255.0, alpha: 1.0)
+    }
     
     public struct Gray {
         /// Hex: #949599
