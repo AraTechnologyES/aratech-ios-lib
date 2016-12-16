@@ -13,6 +13,9 @@ public enum Icon : String {
     case blue
     case clear
     case wallet
+    case kapital
+    case kapitalLogo
+    case tickets
     
     public func image(selected: Bool = false) -> UIImage {
         return UIImage(named: selected ? self.rawValue + "_selected" : self.rawValue)!
