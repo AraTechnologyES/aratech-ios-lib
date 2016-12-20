@@ -11,8 +11,10 @@ import UIKit
     @IBInspectable public var circular: Bool = false {
         didSet {
             if circular {
-                self.layer.cornerRadius = self.frame.size.height / 2
-                self.layer.masksToBounds = true
+                self.layer.borderWidth = 1.0
+                self.layer.borderColor = UIColor.lightGray.cgColor
+                self.layer.cornerRadius = self.bounds.width / 2
+                self.clipsToBounds = true
             }
         }
     }
