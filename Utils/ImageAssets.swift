@@ -6,12 +6,26 @@ import Foundation
 
 //MARK:- Images assets
 
-public enum Icon : String {
-    case imageAssetName
-    case CheckBox
-    case CheckBoxPartial
+public protocol ImageAssetProvider {
+    associatedtype ImageAssetName: RawRepresentable
     
-    public func image(selected: Bool = false) -> UIImage {
-        return UIImage(named: selected ? self.rawValue + "_selected" : self.rawValue)!
+    static func image(forAsset asset: ImageAssetName, selected: Bool) -> UIImage
+}
+
+extension ImageAssetProvider where ImageAssetName.RawValue == String {
+    
+    public static func image(forAsset asset: ImageAssetName, selected: Bool = false) -> UIImage {
+        return UIImage(named: selected ? asset.rawValue + "_selected" : asset.rawValue)!
     }
+}
+
+private struct UseExample: ImageAssetProvider {
+    
+    enum ImageAssetName: String {
+        case example
+    }
+}
+
+private func example() -> UIImage{
+    return UseExample.image(forAsset: .example)
 }
