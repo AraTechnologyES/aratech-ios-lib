@@ -10,22 +10,26 @@ import UIKit
 /// - partial:    Parcialmente seleccionados los elementos internos
 /// - noSelected: Ningun elemento interno seleccionado
 
-public enum SelectionType {
+public enum SelectionType: ImageAssetProvider {
     case selected
     case partial
     case noSelected
     
+    public enum ImageAssetName: String {
+        case CheckBox
+        case CheckBoxPartial
+    }
     
     /// La imagen que representa al estado
     public var image: UIImage {
         get {
             switch self {
             case .noSelected:
-                return Icon.CheckBox.image()
+                return SelectionType.image(forAsset: .CheckBox)
             case .partial:
-                return Icon.CheckBoxPartial.image()
+                return SelectionType.image(forAsset: .CheckBoxPartial)
             case .selected:
-                return Icon.CheckBox.image(selected: true)
+                return SelectionType.image(forAsset: .CheckBox, selected: true)
             }
         }
     }
