@@ -19,6 +19,8 @@ extension ImageAssetProvider where ImageAssetName.RawValue == String {
     }
 }
 
+// MARK:- Use Example
+
 private struct UseExample: ImageAssetProvider {
     
     enum ImageAssetName: String {
