@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA219E771E3210D1005DCB48 /* UITextView.swift */; };
 		EA63D1EF1DCCADDC000394E2 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */; };
 		EA823B801DC798A90011F74D /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA823B761DC798A80011F74D /* Utils.framework */; };
 		EA823B851DC798A90011F74D /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823B841DC798A90011F74D /* UtilsTests.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA219E771E3210D1005DCB48 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		EA823B761DC798A80011F74D /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA823B791DC798A80011F74D /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				EA823BA11DC79BDD0011F74D /* UITableViewCell.swift */,
 				EA823BAB1DC79C8A0011F74D /* UICollectionView.swift */,
 				EA823BA71DC79C480011F74D /* UICollectionReusableView.swift */,
+				EA219E771E3210D1005DCB48 /* UITextView.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				EA823BAC1DC79C8A0011F74D /* UICollectionView.swift in Sources */,
 				EA823B951DC79A220011F74D /* SegueHandlerType.swift in Sources */,
 				EA823BA81DC79C480011F74D /* UICollectionReusableView.swift in Sources */,
+				EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */,
 				EA823BA61DC79C0B0011F74D /* NibLoadableView.swift in Sources */,
 				EA823B991DC79A880011F74D /* UINavigationController.swift in Sources */,
 				EA823B921DC799B50011F74D /* UIViewController.swift in Sources */,
