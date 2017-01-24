@@ -13,7 +13,7 @@ extension UIColor {
     /// Calcula el color correspondiente al código hexadecimal.
     ///
     /// - Parameter hex: Código hexadecimal del color. El código puede tener el formato #RRGGBB ó #AARRGGBB, siendo A el alfa, r rojo, g verde y b azul. Cada cifra está en formato hexadecimal: 0...F
-    convenience init?(hex: String) {
+    public convenience init?(hex: String) {
         var hex = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if hex.hasPrefix("#") {
@@ -33,7 +33,7 @@ extension UIColor {
     /// Calcula el color correspondiente al código hexadecimal.
     ///
     /// - Parameter hex: Código hexadecimal del color. El código puede tener el formato 0xRRGGBB ó 0xAARRGGBB, siendo A el alfa, r rojo, g verde y b azul. Cada cifra está en formato hexadecimal: 0...F
-    convenience init(hexCode: UInt32) {
+    public convenience init(hexCode: UInt32) {
         var components: (A:CGFloat,R:CGFloat,G:CGFloat,B:CGFloat)
         
         if hexCode & 0xFF000000 > 0 {
