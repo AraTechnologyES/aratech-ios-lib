@@ -30,6 +30,7 @@
 		EA823BB21DC79E6E0011F74D /* Sandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823BB11DC79E6E0011F74D /* Sandbox.swift */; };
 		EAC22C971DC9EF66003083BA /* SelectableListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC22C961DC9EF66003083BA /* SelectableListTests.swift */; };
 		EAE127BE1E0AE9D4009F41F5 /* Utils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EAE127BD1E0AE9D4009F41F5 /* Utils.podspec */; };
+		EAF958D21E37761B00EC2FCB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF958D11E37761B00EC2FCB /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		EA823BB11DC79E6E0011F74D /* Sandbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sandbox.swift; sourceTree = "<group>"; };
 		EAC22C961DC9EF66003083BA /* SelectableListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableListTests.swift; sourceTree = "<group>"; };
 		EAE127BD1E0AE9D4009F41F5 /* Utils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Utils.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EAF958D11E37761B00EC2FCB /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				EA823BAB1DC79C8A0011F74D /* UICollectionView.swift */,
 				EA823BA71DC79C480011F74D /* UICollectionReusableView.swift */,
 				EA219E771E3210D1005DCB48 /* UITextView.swift */,
+				EAF958D11E37761B00EC2FCB /* UIColor.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				EA823BA01DC79B750011F74D /* Color.swift in Sources */,
 				EA823BAE1DC79CB00011F74D /* SelectableList.swift in Sources */,
 				EA823BB21DC79E6E0011F74D /* Sandbox.swift in Sources */,
+				EAF958D21E37761B00EC2FCB /* UIColor.swift in Sources */,
 				EA823BAA1DC79C690011F74D /* UITableView.swift in Sources */,
 				EA63D1EF1DCCADDC000394E2 /* RoundedImageView.swift in Sources */,
 				EA823BAC1DC79C8A0011F74D /* UICollectionView.swift in Sources */,

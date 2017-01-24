@@ -21,9 +21,11 @@ class UtilsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUIColorExtension() {
+        let hexColor = UIColor(hex: "#949599")
+        let rgbColor = UIColor(red: 148.0/255.0, green: 149.0/255.0, blue: 153.0/255.0, alpha: 1.0)
+        
+        XCTAssert(hexColor!==rgbColor)
     }
     
     func testPerformanceExample() {
