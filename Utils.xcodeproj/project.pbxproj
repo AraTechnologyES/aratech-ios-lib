@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA219E771E3210D1005DCB48 /* UITextView.swift */; };
+		EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5766B61E390AF000CE6CC4 /* FillableView.swift */; };
 		EA63D1EF1DCCADDC000394E2 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */; };
 		EA823B801DC798A90011F74D /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA823B761DC798A80011F74D /* Utils.framework */; };
 		EA823B851DC798A90011F74D /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823B841DC798A90011F74D /* UtilsTests.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		EA219E771E3210D1005DCB48 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		EA5766B61E390AF000CE6CC4 /* FillableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillableView.swift; sourceTree = "<group>"; };
 		EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		EA823B761DC798A80011F74D /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA823B791DC798A80011F74D /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		EA63D1F01DCCAE0C000394E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA5766B61E390AF000CE6CC4 /* FillableView.swift */,
 				EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */,
 			);
 			name = Views;
@@ -296,6 +299,7 @@
 				EA823BA41DC79BF40011F74D /* ReusableView.swift in Sources */,
 				EA823B9C1DC79AD80011F74D /* ImageAssets.swift in Sources */,
 				EA823BA21DC79BDD0011F74D /* UITableViewCell.swift in Sources */,
+				EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */,
 				EA823B9E1DC79AE60011F74D /* Spinner.swift in Sources */,
 				EA823BB01DC79D1C0011F74D /* Style.swift in Sources */,
 				EA823BA01DC79B750011F74D /* Color.swift in Sources */,
