@@ -163,6 +163,7 @@
 		EA823B931DC799B80011F74D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				EA823BAD1DC79CB00011F74D /* SelectableList.swift */,
 				EA823B941DC79A220011F74D /* SegueHandlerType.swift */,
 				EA823B9B1DC79AD80011F74D /* ImageAssets.swift */,
 				EA823B961DC79A4C0011F74D /* Notificable.swift */,
@@ -177,7 +178,6 @@
 			children = (
 				EA823B9D1DC79AE60011F74D /* Spinner.swift */,
 				EA823B9F1DC79B750011F74D /* Color.swift */,
-				EA823BAD1DC79CB00011F74D /* SelectableList.swift */,
 				EA823BAF1DC79D1C0011F74D /* Style.swift */,
 				EA823BB11DC79E6E0011F74D /* Sandbox.swift */,
 			);

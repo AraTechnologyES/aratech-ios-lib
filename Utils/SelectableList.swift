@@ -1,10 +1,6 @@
 //
 //  SelectableList.swift
 //  Tests
-//
-//  Created by Aratech iOS on 25/1/17.
-//  Copyright © 2017 AraTech. All rights reserved.
-//
 
 import Foundation
 
@@ -36,12 +32,12 @@ public enum SelectionState {
     }
 }
 
-protocol Selectable {
+public protocol Selectable {
     var state: SelectionState { get set }
 }
 
 /// Define una lista en la que cada nodo puede serlo a su vez, y que tiene definido su estado por el de sus hijos. La variable `state` ha de ser definida por quien implemente este protocolo, pero si es modificada directamente romperá el correcto funcionamiento de la lista, sin embargo puede ser observada ('didSet') para reaccionar a los cambios.
-protocol SelectableList: class, Selectable {
+public protocol SelectableList: class, Selectable {
     var isStateUpdated: Bool { get set }
     
     /// No manipular directamente, usar metodos de la extensión.
