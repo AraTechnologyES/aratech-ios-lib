@@ -1,8 +1,12 @@
 //
 //  FillableCircleView.swift
 //  Utils
+//
+//  Animation credit to: http://stackoverflow.com/a/36461202/5014794
 
 import UIKit
+
+// FIXME:- En Interfaz Builder la vista interior no está bien encajada
 
 /// Vista rellenable
 @IBDesignable open class FillableView: UIView {
@@ -10,13 +14,20 @@ import UIKit
     private var interiorView: UIView!
     
     private var interiorViewHeight: CGFloat {
-        return self.frame.height - self.borderWidth*2 - self.margin
+        return self.frame.height - self.borderWidth*2 - self.margin*2
+    }
+    
+    private var interiorViewWidth: CGFloat {
+        return self.frame.width - self.borderWidth*2 - self.margin*2
     }
     
     // MARK:- API
     
     /// Si los cambios son animados
-    @IBInspectable public var animates: Bool = false // FIXME: Por hacer la animación de la CALayer
+    @IBInspectable public var animates: Bool = false
+    
+    /// Tiempo de duración de la animación
+    @IBInspectable public var animationTime: CFTimeInterval = 1.0
     
     /// Si la vista es circular
     @IBInspectable public var isCircular: Bool = true {
@@ -25,7 +36,7 @@ import UIKit
                 self.layer.cornerRadius = self.bounds.height / 2
                 self.clipsToBounds = true
                 
-                self.interiorView.layer.cornerRadius = self.interiorView.frame.height / 2
+                self.interiorView.layer.cornerRadius = self.interiorViewHeight / 2
                 self.interiorView.clipsToBounds = true
             } else {
                 self.layer.cornerRadius = 0
@@ -99,6 +110,7 @@ import UIKit
         
         if self.isCircular {
             self.layer.cornerRadius = self.frame.height / 2
+            self.clipsToBounds = true
         }
         
         // Vista interior
@@ -107,7 +119,7 @@ import UIKit
         self.interiorView.backgroundColor = fillColor
         
         if self.isCircular {
-            self.interiorView.layer.cornerRadius = self.interiorView.frame.height / 2
+            self.interiorView.layer.cornerRadius = self.interiorViewHeight / 2
             self.interiorView.clipsToBounds = true
         }
         
@@ -118,15 +130,27 @@ import UIKit
     }
     
     private func updateInteriorView(){
-        let oldCenter = self.interiorView.center
-        self.interiorView.frame = rectForInteriorView()
-        self.interiorView.center = oldCenter
-        self.interiorView.layer.mask = maskForInteriorView()
+        
+        // Nuevo frame
+        self.interiorView.frame = self.rectForInteriorView()
+        // Si es circular hay que actualizar el cornerRadius por si ha cambiado el tamaño del frame
+        if self.isCircular { self.interiorView.layer.cornerRadius = self.interiorViewHeight/2 }
+        
+        // Nueva máscara
+        self.interiorView.layer.mask = self.maskForInteriorView()
+        
         self.setNeedsLayout()
+        
     }
     
     private func rectForInteriorView() -> CGRect {
-        return CGRect(x: 0, y: 0, width: self.interiorViewHeight, height: self.interiorViewHeight)
+        
+        // Calcular origen de la vista interior: origen vista exterior + anchura borde + margen entre las vistas
+        let origin = CGPoint(x: self.borderWidth+self.margin, y: self.borderWidth+self.margin)
+        
+        let size = CGSize(width: self.interiorViewWidth, height: self.interiorViewHeight)
+        
+        return CGRect(origin: origin, size: size)
     }
     
     private func maskForInteriorView() -> CALayer {
@@ -142,7 +166,32 @@ import UIKit
         myPath.addPath(CGPath(rect: maskRect, transform: nil))
         
         let maskLayer = CAShapeLayer()
+        
+        if self.animates, let mask = self.interiorView.layer.mask as? CAShapeLayer {
+            // create new animation
+            let anim = CABasicAnimation(keyPath: "path")
+            
+            // from value is the current mask path
+            anim.fromValue = mask.path
+            
+            // to value is the new path
+            anim.toValue = myPath
+            
+            // duration of your animation
+            anim.duration = self.animationTime
+            
+            // custom timing function to make it look smooth
+            anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            
+            // add animation
+            maskLayer.add(anim, forKey: nil)
+        }
+        
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
         maskLayer.path = myPath
+        CATransaction.commit()
+        
         maskLayer.fillRule = kCAFillRuleEvenOdd
         
         return maskLayer
