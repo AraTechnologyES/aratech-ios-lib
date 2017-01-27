@@ -23,13 +23,13 @@ import UIKit
     
     // MARK:- API
     
-    /// Si los cambios son animados
+    /// Si los cambios son animados. El valor por defecto es `false`
     @IBInspectable public var animates: Bool = false
     
-    /// Tiempo de duración de la animación
+    /// Tiempo de duración de la animación. El valor por defecto es `1.0`
     @IBInspectable public var animationTime: CFTimeInterval = 1.0
     
-    /// Si la vista es circular
+    /// Si la vista es circular. El valor por defecto es `true`
     @IBInspectable public var isCircular: Bool = true {
         didSet {
             
@@ -38,7 +38,7 @@ import UIKit
         }
     }
     
-    /// Anchura del borde
+    /// Anchura del borde. El valor por defecto es `2.0`
     @IBInspectable public var borderWidth: CGFloat = 2 {
         didSet {
             
@@ -49,7 +49,7 @@ import UIKit
         }
     }
     
-    /// Color del borde
+    /// Color del borde. El valor por defecto es `.black`
     @IBInspectable public var borderColor: UIColor = .black {
         didSet {
             
@@ -59,7 +59,7 @@ import UIKit
         }
     }
     
-    /// Margen entre el borde y el relleno
+    /// Margen entre el borde y el relleno. El valor por defecto es `2.0`
     @IBInspectable public var margin: CGFloat = 2 {
         didSet {
             
@@ -69,7 +69,7 @@ import UIKit
         }
     }
     
-    /// Color de relleno
+    /// Color de relleno. El valor por defecto es `.red`
     @IBInspectable public var fillColor: UIColor = .red {
         didSet {
             
@@ -79,7 +79,7 @@ import UIKit
         }
     }
     
-    /// Porcentaje de relleno: [0..100]
+    /// Porcentaje de relleno: [0..100]. El valor por defecto es `50`
     @IBInspectable public var fillPercentage: Int = 50 {
         didSet {
             
