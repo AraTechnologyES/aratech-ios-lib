@@ -43,6 +43,9 @@ public protocol SelectableList: class, Selectable {
     /// No manipular directamente, usar metodos de la extensión.
     var state: SelectionState { get set }
     var items: [SelectableList] { get }
+    
+    /// Descripción del elemento
+    var description: String { get }
 }
 
 extension SelectableList {
@@ -50,6 +53,14 @@ extension SelectableList {
     subscript(index: Int) -> Selectable {
         get {
             return self.items[index]
+        }
+    }
+    
+    subscript(filter: String) -> [SelectableList] {
+        get {
+            return self.items.filter({ (item) -> Bool in
+                return item.description.contains(filter)
+            })
         }
     }
     
