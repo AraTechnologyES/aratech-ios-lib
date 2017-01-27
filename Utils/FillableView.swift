@@ -32,41 +32,39 @@ import UIKit
     /// Si la vista es circular
     @IBInspectable public var isCircular: Bool = true {
         didSet {
-            if isCircular {
-                self.layer.cornerRadius = self.bounds.height / 2
-                self.clipsToBounds = true
-                
-                self.interiorView.layer.cornerRadius = self.interiorViewHeight / 2
-                self.interiorView.clipsToBounds = true
-            } else {
-                self.layer.cornerRadius = 0
-                self.clipsToBounds = false
-                
-                self.interiorView.layer.cornerRadius = 0
-                self.interiorView.clipsToBounds = false
-            }
+            
+            guard isCircular != oldValue else { return }
+            self.layoutSubviews()
         }
     }
     
     /// Anchura del borde
     @IBInspectable public var borderWidth: CGFloat = 2 {
         didSet {
+            
+            guard borderWidth != oldValue else { return }
+            
             self.layer.borderWidth = borderWidth
-            self.updateInteriorView()
+            self.layoutSubviews()
         }
     }
     
     /// Color del borde
     @IBInspectable public var borderColor: UIColor = .black {
         didSet {
+            
+            guard borderColor != oldValue else { return }
+            
             self.layer.borderColor = borderColor.cgColor
-            setNeedsDisplay()
         }
     }
     
     /// Margen entre el borde y el relleno
-    @IBInspectable public var margin: CGFloat = 5 {
+    @IBInspectable public var margin: CGFloat = 2 {
         didSet {
+            
+            guard margin != oldValue else { return }
+            
             self.updateInteriorView()
         }
     }
@@ -74,14 +72,19 @@ import UIKit
     /// Color de relleno
     @IBInspectable public var fillColor: UIColor = .red {
         didSet {
+            
+            guard fillColor != oldValue else { return }
+            
             self.interiorView?.backgroundColor = fillColor
-            setNeedsLayout()
         }
     }
     
     /// Porcentaje de relleno: [0..100]
     @IBInspectable public var fillPercentage: Int = 50 {
         didSet {
+            
+            guard fillPercentage != oldValue else { return }
+            
             self.updateInteriorView()
         }
     }
@@ -98,6 +101,13 @@ import UIKit
     
     override open func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
+    }
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.updateInteriorView()
+        self.checkShape()
     }
     
     // MARK:- Private
@@ -129,18 +139,28 @@ import UIKit
         self.addSubview(self.interiorView)
     }
     
+    private func checkShape() {
+        if isCircular {
+            self.layer.cornerRadius = self.bounds.height / 2
+            self.clipsToBounds = true
+            
+            self.interiorView.layer.cornerRadius = self.interiorViewHeight / 2
+            self.interiorView.clipsToBounds = true
+        } else {
+            self.layer.cornerRadius = 0
+            self.clipsToBounds = false
+            
+            self.interiorView.layer.cornerRadius = 0
+            self.interiorView.clipsToBounds = false
+        }
+    }
+    
     private func updateInteriorView(){
-        
         // Nuevo frame
         self.interiorView.frame = self.rectForInteriorView()
-        // Si es circular hay que actualizar el cornerRadius por si ha cambiado el tamaño del frame
-        if self.isCircular { self.interiorView.layer.cornerRadius = self.interiorViewHeight/2 }
         
         // Nueva máscara
         self.interiorView.layer.mask = self.maskForInteriorView()
-        
-        self.setNeedsLayout()
-        
     }
     
     private func rectForInteriorView() -> CGRect {
