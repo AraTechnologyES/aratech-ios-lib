@@ -1,6 +1,6 @@
 //
 //  SelectableList.swift
-//  Tests
+//  Utils
 
 import Foundation
 

@@ -2,9 +2,6 @@
 //  Utils.h
 //  Utils
 //
-//  Created by Aratech iOS on 31/10/16.
-//  Copyright © 2016 AraTech. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 
