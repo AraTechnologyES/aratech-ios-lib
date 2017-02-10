@@ -30,6 +30,7 @@
 		EA823BB01DC79D1C0011F74D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823BAF1DC79D1C0011F74D /* Style.swift */; };
 		EA823BB21DC79E6E0011F74D /* Sandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823BB11DC79E6E0011F74D /* Sandbox.swift */; };
 		EAC22C971DC9EF66003083BA /* SelectableListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC22C961DC9EF66003083BA /* SelectableListTests.swift */; };
+		EAD94B261E4DD3F700A2B90D /* SlideAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD94B251E4DD3F700A2B90D /* SlideAnimationManager.swift */; };
 		EAE127BE1E0AE9D4009F41F5 /* Utils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EAE127BD1E0AE9D4009F41F5 /* Utils.podspec */; };
 		EAF958D21E37761B00EC2FCB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF958D11E37761B00EC2FCB /* UIColor.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		EA823BAF1DC79D1C0011F74D /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		EA823BB11DC79E6E0011F74D /* Sandbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sandbox.swift; sourceTree = "<group>"; };
 		EAC22C961DC9EF66003083BA /* SelectableListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableListTests.swift; sourceTree = "<group>"; };
+		EAD94B251E4DD3F700A2B90D /* SlideAnimationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideAnimationManager.swift; sourceTree = "<group>"; };
 		EAE127BD1E0AE9D4009F41F5 /* Utils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Utils.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EAF958D11E37761B00EC2FCB /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 		EA823B781DC798A80011F74D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EAD94B241E4DD35900A2B90D /* Animations */,
 				EA823B9A1DC79AA60011F74D /* Utils */,
 				EA63D1F01DCCAE0C000394E2 /* Views */,
 				EA823B931DC799B80011F74D /* Protocols */,
@@ -182,6 +185,14 @@
 				EA823BB11DC79E6E0011F74D /* Sandbox.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		EAD94B241E4DD35900A2B90D /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				EAD94B251E4DD3F700A2B90D /* SlideAnimationManager.swift */,
+			);
+			name = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +309,7 @@
 			files = (
 				EA823BA41DC79BF40011F74D /* ReusableView.swift in Sources */,
 				EA823B9C1DC79AD80011F74D /* ImageAssets.swift in Sources */,
+				EAD94B261E4DD3F700A2B90D /* SlideAnimationManager.swift in Sources */,
 				EA823BA21DC79BDD0011F74D /* UITableViewCell.swift in Sources */,
 				EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */,
 				EA823B9E1DC79AE60011F74D /* Spinner.swift in Sources */,
