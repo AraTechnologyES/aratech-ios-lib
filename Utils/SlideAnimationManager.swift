@@ -96,7 +96,7 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
     /// - Parameters:
     ///   - forSegue: Identificador de la segue al controlador presentado
     ///   - interactive: Si se puede realizar de manera interactiva, ej: deslizando
-    init(forSegue segueIdentifier: String, interactive: Bool = false) {
+    public init(forSegue segueIdentifier: String, interactive: Bool = false) {
         super.init()
         self.presentSegueIdentifier = segueIdentifier
         self.isInteractive = interactive
