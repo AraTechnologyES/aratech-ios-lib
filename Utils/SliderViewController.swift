@@ -5,7 +5,7 @@
 import UIKit
 
 /// Implementa un slider o galería de imágenes paginada
-class SliderViewController: UIViewController {
+open class SliderViewController: UIViewController {
     
     /// Imágenes a mostrar
     public var images: [UIImage] = [] {
@@ -78,13 +78,13 @@ class SliderViewController: UIViewController {
     
     // MARK:- Life Cicle
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         self.automaticallyAdjustsScrollViewInsets = false
     }
     
-    override func viewDidLayoutSubviews() {
+    override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         self.scrollView.frame = CGRect(x:0, y:0, width:self.view.frame.width, height:self.view.frame.height)
@@ -96,7 +96,7 @@ class SliderViewController: UIViewController {
 
 extension SliderViewController: UIScrollViewDelegate {
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
         // Test the offset and calculate the current page after scrolling ends
         let pageWidth: CGFloat = self.scrollView.bounds.width
