@@ -24,6 +24,16 @@ open class SliderViewController: UIViewController {
     /// Acción a ejecutar al pasar de página
     public var onPageChangeAction: ((_ newPage: Int)->Void)?
     
+    private var pageWidth: CGFloat {
+        return self.scrollView.bounds.width
+    }
+    
+    // MARK:- API
+    
+    public func scroll(toPage page: Int, animated: Bool = false) {
+        self.scrollView.scrollRectToVisible(CGRect(x: 1+(self.pageWidth*CGFloat(page)), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height), animated: animated)
+    }
+    
     // MARK:- IBOutlets
     
     @IBOutlet fileprivate weak var scrollView: UIScrollView! {
