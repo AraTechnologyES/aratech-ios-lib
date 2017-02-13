@@ -32,7 +32,11 @@ open class SliderViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var pageControl: UIPageControl! {
+        didSet {
+            pageControl.hidesForSinglePage = true
+        }
+    }
     
     // MARK:- Private
     
