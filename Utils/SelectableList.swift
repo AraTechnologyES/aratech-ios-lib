@@ -42,14 +42,13 @@ public protocol Selectable {
 
 /// Define una lista en la que cada nodo puede serlo a su vez, y que tiene definido su estado por el de sus hijos. La variable `state` ha de ser definida por quien implemente este protocolo, pero si es modificada directamente romperá el correcto funcionamiento de la lista, sin embargo puede ser observada ('didSet') para reaccionar a los cambios.
 public protocol SelectableList: class, Selectable {
-    var isStateUpdated: Bool { get set }
     
     /// No manipular directamente, usar metodos de la extensión.
     var state: SelectionState { get set }
     var items: [SelectableList] { get set }
     
     /// Descripción del elemento
-    var description: String { get }
+    var itemDescription: String { get }
 }
 
 extension SelectableList {
@@ -69,7 +68,7 @@ extension SelectableList {
     public subscript(filter: String) -> [SelectableList] {
         get {
             return self.items.filter({ (item) -> Bool in
-                return item.description.localizedCaseInsensitiveContains(filter)
+                return item.itemDescription.localizedCaseInsensitiveContains(filter)
             })
         }
     }
@@ -83,26 +82,18 @@ extension SelectableList {
     }
     
     public func getState() -> SelectionState {
-        if self.isStateUpdated {
-            // El estado del elemento es el correcto, no hace falta buscar
+        if items.count == 0 {
+            // Si el elemento es 'hoja', se devuelve directamente su estado
             return self.state
         } else {
-            if items.count == 0 {
-                // Si el elemento es 'hoja', se devuelve directamente su estado
-                self.isStateUpdated = true
-                return self.state
-            } else {
-                // Si el elemento contiene items, se debe consultar el estado de ellos y combinar con el propio
-                let itemsState = self.items.reduce(self.items[0].getState(), { (state, list) -> SelectionState in
-                    return state && list.getState()
-                })
-                
-                self.state = itemsState
-                
-                self.isStateUpdated = true
-                
-                return self.state
-            }
+            // Si el elemento contiene items, se debe consultar el estado de ellos y combinar con el propio
+            let itemsState = self.items.reduce(self.items[0].getState(), { (state, list) -> SelectionState in
+                return state && list.getState()
+            })
+            
+            self.state = itemsState
+            
+            return self.state
         }
     }
     
@@ -123,8 +114,6 @@ extension SelectableList {
     }
     
     public func set(child: Int, state: SelectionState) {
-        self.isStateUpdated = false
-        
         self[child].set(state: state)
     }
 }
