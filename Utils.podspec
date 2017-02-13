@@ -24,4 +24,8 @@ Pod::Spec.new do |s|
     
     s.source_files  = "Utils/**/*.{h,m,swift}"
     
+    s.resource_bundles = {
+        'Utils' => ['Utils/**/*.{storyboard,xib}']
+    }
+    
 end
