@@ -49,6 +49,8 @@ open class SliderViewController: UIViewController {
         }
         
         self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width*CGFloat(images.count), height: self.scrollView.frame.height)
+        
+        self.pageControl.numberOfPages = self.images.count
     }
     
     func setSupplementaryViews() {
