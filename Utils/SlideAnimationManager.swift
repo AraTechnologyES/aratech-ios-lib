@@ -64,24 +64,30 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
     /// Anchura de la vista presentada, en porcentaje, `0.8` por defecto
     public var width: CGFloat = 0.8
     
+    /// Opacidad de la vista a insertar encima de la vista origen, `0.5` por defecto
+    public var sourceViewDarkenOpacity: CGFloat = 0.5
+    
+    /// Color de la vista a insertar encima de la vista origen, `negro` por defecto
+    public var sourceViewDarkenColor: UIColor = .black
+    
     /// Controlador origen
-    public var sourceViewController: UIViewController! {
+    public var source: UIViewController! {
         didSet {
             if self.isInteractive {
                 let gesture = AnimationMode.present.gesture
                 gesture.addTarget(self, action: #selector(handleGesture(gestureRecognizer:)))
-                self.sourceViewController.view.addGestureRecognizer(gesture)
+                self.source.view.addGestureRecognizer(gesture)
             }
         }
     }
     
     /// Controlador destino
-    public var destinationViewController: UIViewController! {
+    public var destination: UIViewController! {
         didSet {
             if self.isInteractive {
                 let gesture = AnimationMode.dismiss.gesture
                 gesture.addTarget(self, action: #selector(handleGesture(gestureRecognizer:)))
-                self.destinationViewController.view.addGestureRecognizer(gesture)
+                self.destination.view.addGestureRecognizer(gesture)
             }
         }
     }
@@ -89,13 +95,13 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
     private var presentSegueIdentifier: String = ""
     
     @objc private func backgroundViewTapGestureSelector() {
-        self.destinationViewController.dismiss(animated: true, completion: nil)
+        self.destination.dismiss(animated: true, completion: nil)
     }
     
     ///
     /// - Parameters:
     ///   - forSegue: Identificador de la segue al controlador presentado
-    ///   - interactive: Si se puede realizar de manera interactiva, ej: deslizando
+    ///   - interactive: Si se puede realizar de manera interactiva, ej: deslizando, `false` por defecto
     public init(forSegue segueIdentifier: String, interactive: Bool = false) {
         super.init()
         self.presentSegueIdentifier = segueIdentifier
@@ -119,6 +125,8 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
         
         self.prepare(for: self.mode, inContainer: containerView, from: fromViewController, to: toViewController)
         
+        let snapshot = containerView.viewWithTag(SlideAnimationManager.snapshotTag)
+        
         // Animación
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
             
@@ -128,10 +136,16 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
                 // Se traslada el centro de la vista destino una cantidad proporcional a la anchura de la pantalla, hacia la derecha
                 toViewController.view.center.x += UIScreen.main.bounds.width * self.width
                 
+                // Se oscurece la vista añadida encima del snapshot para oscurecerlo
+                snapshot?.subviews[1].alpha = self.sourceViewDarkenOpacity
+                
             case .dismiss:
-                // Se mueve el centro de la vista origen, hacia la izquierda, una cantidad equivalente a su anchura visible, de tal forma que quedará oculta en la parte izquierda de la pantalla
                 if !transitionContext.transitionWasCancelled {
+                    // Se mueve el centro de la vista origen, hacia la izquierda, una cantidad equivalente a su anchura visible, de tal forma que quedará oculta en la parte izquierda de la pantalla
                     fromViewController.view.center.x -= fromViewController.view.bounds.width
+                    
+                    // Se transparenta la vista añadida encima del snapshot para aclararla
+                    snapshot?.subviews[1].alpha = 0
                 }
             }
             
@@ -142,14 +156,12 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
                 
             case .present:
                 fromViewController.view.isHidden = false
-                
             case .dismiss:
                 // Se comprueba que la transición no ha sido cancelada
                 if didTransitionComplete {
                     // Se inserta la vista destino encima de la vista origen
                     containerView.insertSubview(toViewController.view, aboveSubview: fromViewController.view)
                     // Se elimina el snapshot de la jerarquía
-                    let snapshot = containerView.viewWithTag(SlideAnimationManager.snapshotTag)
                     snapshot?.removeFromSuperview()
                 }
             }
@@ -171,9 +183,16 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
             
             // Creación Snapshot
             let snapshot = fromViewController.view.snapshotView(afterScreenUpdates: true)!
-            snapshot.accessibilityIdentifier = "sourceViewController Snapshot"
+            snapshot.accessibilityIdentifier = "source Snapshot"
             snapshot.tag = SlideAnimationManager.snapshotTag
             snapshot.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundViewTapGestureSelector)))
+            // Vista para oscurecer el snapshot
+            let darkenView = UIView(frame: CGRect(x: 0, y: 0, width: snapshot.frame.width, height: snapshot.frame.height))
+            darkenView.backgroundColor = self.sourceViewDarkenColor
+            darkenView.accessibilityIdentifier = "darkenView"
+            darkenView.alpha = 0
+            snapshot.addSubview(darkenView)
+            snapshot.bringSubview(toFront: darkenView)
             containerView.insertSubview(snapshot, belowSubview: toViewController.view)
             fromViewController.view.isHidden = true
             
@@ -200,11 +219,11 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
             
             switch mode {
             case .present:
-                if self.sourceViewController.shouldPerformSegue(withIdentifier: self.presentSegueIdentifier, sender: self) {
-                    self.sourceViewController.performSegue(withIdentifier: self.presentSegueIdentifier, sender: self)
+                if self.source.shouldPerformSegue(withIdentifier: self.presentSegueIdentifier, sender: self) {
+                    self.source.performSegue(withIdentifier: self.presentSegueIdentifier, sender: self)
                 }
             case .dismiss:
-                self.destinationViewController.dismiss(animated: true, completion: nil)
+                self.destination.dismiss(animated: true, completion: nil)
             }
             
         case .changed:
