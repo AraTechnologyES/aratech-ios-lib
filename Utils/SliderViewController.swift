@@ -14,6 +14,9 @@ open class SliderViewController: UIViewController {
         }
     }
     
+    /// Modo de las imágenesuti
+    public var contentMode: UIViewContentMode = .scaleToFill
+    
     /// Vistas suplementarias en cada página
     public var supplementaryViews: [Int:[UIView]] = [:] {
         didSet {
@@ -51,7 +54,7 @@ open class SliderViewController: UIViewController {
     // MARK:- Private
     
     fileprivate func setImagesInScrollView() {
-    
+        
         guard (self.scrollView) != nil else { return }
         
         self.scrollView.subviews.forEach { $0.removeFromSuperview() }
@@ -59,6 +62,7 @@ open class SliderViewController: UIViewController {
         for (index,image) in images.enumerated() {
             let imageView = UIImageView(frame: CGRect(x: CGFloat(index)*self.scrollView.frame.width, y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height))
             imageView.image = image
+            imageView.contentMode = self.contentMode
             self.scrollView.addSubview(imageView)
         }
         
@@ -90,10 +94,10 @@ open class SliderViewController: UIViewController {
             }
         }
     }
-
+    
     
     // MARK:- Life Cicle
-
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
         
@@ -103,7 +107,7 @@ open class SliderViewController: UIViewController {
     override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        self.scrollView.frame = CGRect(x:0, y:0, width:self.view.frame.width, height:self.view.frame.height)
+        self.scrollView?.frame = CGRect(x:0, y:0, width:self.view.frame.width, height:self.view.frame.height)
         
         self.setImagesInScrollView()
         self.setSupplementaryViews()
