@@ -25,6 +25,16 @@ class UtilsTests: XCTestCase {
         XCTAssert(hexColor!==rgbColor)
     }
     
+    func testStyle() {
+        let button = UIButton(type: .system)
+        button.apply(style: .login)
+        XCTAssert(button.contentEdgeInsets.top==5.0 && button.contentEdgeInsets.left == 20.0 && button.contentEdgeInsets.bottom == 5 && button.contentEdgeInsets.right == 20.0)
+        
+        let textField = UITextField(frame: CGRect.zero)
+        textField.apply(style: .login)
+        XCTAssert(textField.textColor == .white)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

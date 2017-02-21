@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Utils
 
 class TestAppUITests: XCTestCase {
         
@@ -28,9 +29,13 @@ class TestAppUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.s
+    func testStyleAccesibility() {
+        let button = UIButton(type: .system)
+        button.apply(style: .login)
+        XCTAssert(button.contentEdgeInsets.top==5.0 && button.contentEdgeInsets.left == 20.0 && button.contentEdgeInsets.bottom == 5 && button.contentEdgeInsets.right == 20.0)
+        
+        let textField = UITextField(frame: CGRect.zero)
+        textField.apply(style: .login)
+        XCTAssert(textField.textColor == .white)
     }
-    
 }

@@ -18,6 +18,11 @@
 		EA5E8C001E55B5390083341A /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA823B761DC798A80011F74D /* Utils.framework */; };
 		EA5E8C011E55B5390083341A /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA823B761DC798A80011F74D /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA63D1EF1DCCADDC000394E2 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */; };
+		EA7950FA1E5C6A90000C1F38 /* StyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7950F91E5C6A90000C1F38 /* StyleApplicable.swift */; };
+		EA7950FD1E5C760E000C1F38 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7950FC1E5C760E000C1F38 /* ButtonStyle.swift */; };
+		EA7950FF1E5C7657000C1F38 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7950FE1E5C7657000C1F38 /* UIButton.swift */; };
+		EA7951011E5C76A1000C1F38 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7951001E5C76A1000C1F38 /* TextFieldStyle.swift */; };
+		EA7951031E5C7859000C1F38 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7951021E5C7859000C1F38 /* UITextField.swift */; };
 		EA823B801DC798A90011F74D /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA823B761DC798A80011F74D /* Utils.framework */; };
 		EA823B851DC798A90011F74D /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823B841DC798A90011F74D /* UtilsTests.swift */; };
 		EA823B871DC798A90011F74D /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA823B791DC798A80011F74D /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -97,6 +102,11 @@
 		EA5E8BF71E55B1F60083341A /* TestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITests.swift; sourceTree = "<group>"; };
 		EA5E8BF91E55B1F60083341A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		EA7950F91E5C6A90000C1F38 /* StyleApplicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleApplicable.swift; sourceTree = "<group>"; };
+		EA7950FC1E5C760E000C1F38 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		EA7950FE1E5C7657000C1F38 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		EA7951001E5C76A1000C1F38 /* TextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
+		EA7951021E5C7859000C1F38 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		EA823B761DC798A80011F74D /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA823B791DC798A80011F74D /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		EA823B7A1DC798A80011F74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -202,6 +212,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		EA7950FB1E5C75F2000C1F38 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				EA7950FC1E5C760E000C1F38 /* ButtonStyle.swift */,
+				EA7951001E5C76A1000C1F38 /* TextFieldStyle.swift */,
+			);
+			name = Styles;
+			sourceTree = "<group>";
+		};
 		EA823B6C1DC798A80011F74D = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +246,7 @@
 		EA823B781DC798A80011F74D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EA7950FB1E5C75F2000C1F38 /* Styles */,
 				EAD94B241E4DD35900A2B90D /* Animations */,
 				EA823B9A1DC79AA60011F74D /* Utils */,
 				EA63D1F01DCCAE0C000394E2 /* Views */,
@@ -260,6 +280,8 @@
 				EA823BA71DC79C480011F74D /* UICollectionReusableView.swift */,
 				EA219E771E3210D1005DCB48 /* UITextView.swift */,
 				EAF958D11E37761B00EC2FCB /* UIColor.swift */,
+				EA7950FE1E5C7657000C1F38 /* UIButton.swift */,
+				EA7951021E5C7859000C1F38 /* UITextField.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +295,7 @@
 				EA823B961DC79A4C0011F74D /* Notificable.swift */,
 				EA823BA31DC79BF40011F74D /* ReusableView.swift */,
 				EA823BA51DC79C0B0011F74D /* NibLoadableView.swift */,
+				EA7950F91E5C6A90000C1F38 /* StyleApplicable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -494,13 +517,16 @@
 			files = (
 				EA823BA41DC79BF40011F74D /* ReusableView.swift in Sources */,
 				EA823B9C1DC79AD80011F74D /* ImageAssets.swift in Sources */,
+				EA7951031E5C7859000C1F38 /* UITextField.swift in Sources */,
 				EAD94B261E4DD3F700A2B90D /* SlideAnimationManager.swift in Sources */,
 				EA823BA21DC79BDD0011F74D /* UITableViewCell.swift in Sources */,
 				EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */,
+				EA7950FF1E5C7657000C1F38 /* UIButton.swift in Sources */,
 				EA823B9E1DC79AE60011F74D /* Spinner.swift in Sources */,
 				EA823BB01DC79D1C0011F74D /* Style.swift in Sources */,
 				EAB642AF1E51CF070065AE06 /* SliderViewController.swift in Sources */,
 				EA823BA01DC79B750011F74D /* Color.swift in Sources */,
+				EA7950FD1E5C760E000C1F38 /* ButtonStyle.swift in Sources */,
 				EA823BAE1DC79CB00011F74D /* SelectableList.swift in Sources */,
 				EA823BB21DC79E6E0011F74D /* Sandbox.swift in Sources */,
 				EAF958D21E37761B00EC2FCB /* UIColor.swift in Sources */,
@@ -512,8 +538,10 @@
 				EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */,
 				EA823BA61DC79C0B0011F74D /* NibLoadableView.swift in Sources */,
 				EA823B991DC79A880011F74D /* UINavigationController.swift in Sources */,
+				EA7950FA1E5C6A90000C1F38 /* StyleApplicable.swift in Sources */,
 				EA823B921DC799B50011F74D /* UIViewController.swift in Sources */,
 				EA823B971DC79A4C0011F74D /* Notificable.swift in Sources */,
+				EA7951011E5C76A1000C1F38 /* TextFieldStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +824,7 @@
 				EA5E8BFC1E55B1F60083341A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA5E8BFD1E55B1F60083341A /* Build configuration list for PBXNativeTarget "TestAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -804,6 +833,7 @@
 				EA5E8BFF1E55B1F60083341A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA823B701DC798A80011F74D /* Build configuration list for PBXProject "Utils" */ = {
 			isa = XCConfigurationList;
