@@ -44,8 +44,8 @@ public struct TextFieldStyle: Style {
 
 public extension TextFieldStyle {
     
-    /// Estilo para la vista de login
-    static var login: TextFieldStyle {
-        return TextFieldStyle(placeHolderTextColor: .white)
+    /// Todos los valores por defecto
+    static var `default`: TextFieldStyle {
+        return TextFieldStyle()
     }
 }

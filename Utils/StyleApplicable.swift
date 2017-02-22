@@ -9,6 +9,9 @@ public protocol Style { }
 
 public protocol StyleApplicable {
     associatedtype style: Style
+    
+    /// Estilo del objeto
+    var style: style? { get set }
 }
 
 public extension StyleApplicable where Self: UIButton, style == ButtonStyle {
@@ -18,12 +21,13 @@ public extension StyleApplicable where Self: UIButton, style == ButtonStyle {
      
      - parameter style: Estilo a aplicar al UIButton
      */
-    public func apply(style: ButtonStyle) {
+    internal func apply(style: ButtonStyle) {
         
-        if let insets = style.insets {
+        // Hay que comprobar que sea distinta a la que ya hay para evitar bucles con layoutSubviews
+        if let insets = style.insets, insets != self.contentEdgeInsets {
             self.contentEdgeInsets = insets
         }
-        
+
         if style.roundedBorder {
             if let cornerRadius = style.cornerRadius {
                 self.layer.cornerRadius = cornerRadius
@@ -34,7 +38,11 @@ public extension StyleApplicable where Self: UIButton, style == ButtonStyle {
         
         self.backgroundColor = style.backgroundColor
         
-        self.titleLabel?.font = style.titleFont
+        // Hay que comprobar que sea distinta a la que ya hay para evitar bucles con layoutSubviews
+        if let titleFont = style.titleFont, titleFont != self.titleLabel?.font {
+            self.titleLabel?.font = titleFont
+        }
+        
         self.titleLabel?.textColor = style.titleColor
     }
 }
@@ -54,14 +62,18 @@ public extension StyleApplicable where Self: UITextField, style == TextFieldStyl
      
      - parameter style: Estilo a aplicar al TextField
      */
-    public func apply(style: TextFieldStyle) {
+    internal func apply(style: TextFieldStyle) {
         
         if style.bottomLine {
             addBorder(withHeight: style.bottomLineHeight, color: style.bottomLineColor)
         }
         
         textColor = style.textColor
-        font = style.textFont
+        
+        // Hay que comprobar que sea distinta a la que ya hay para evitar bucles con layoutSubviews
+        if let textFont = style.textFont, textFont != self.font {
+            self.font = textFont
+        }
         
         if  let placeHolderTextColor = style.placeHolderTextColor,
             let placeholderText = placeholder {
@@ -71,7 +83,5 @@ public extension StyleApplicable where Self: UITextField, style == TextFieldStyl
             
             self.attributedPlaceholder = attributedPlaceholder
         }
-        
-        self.setNeedsLayout()
     }
 }

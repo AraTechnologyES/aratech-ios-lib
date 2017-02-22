@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA219E771E3210D1005DCB48 /* UITextView.swift */; };
+		EA3684871E5D7BA1003CEFC5 /* StyleableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */; };
 		EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5766B61E390AF000CE6CC4 /* FillableView.swift */; };
 		EA5E8BE31E55B1F50083341A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E8BE21E55B1F50083341A /* AppDelegate.swift */; };
-		EA5E8BE51E55B1F50083341A /* AnimationControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E8BE41E55B1F50083341A /* AnimationControllers.swift */; };
+		EA5E8BE51E55B1F50083341A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E8BE41E55B1F50083341A /* ViewController.swift */; };
 		EA5E8BE81E55B1F60083341A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5E8BE61E55B1F60083341A /* Main.storyboard */; };
 		EA5E8BEA1E55B1F60083341A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5E8BE91E55B1F60083341A /* Assets.xcassets */; };
 		EA5E8BED1E55B1F60083341A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5E8BEB1E55B1F60083341A /* LaunchScreen.storyboard */; };
@@ -20,9 +21,7 @@
 		EA63D1EF1DCCADDC000394E2 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */; };
 		EA7950FA1E5C6A90000C1F38 /* StyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7950F91E5C6A90000C1F38 /* StyleApplicable.swift */; };
 		EA7950FD1E5C760E000C1F38 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7950FC1E5C760E000C1F38 /* ButtonStyle.swift */; };
-		EA7950FF1E5C7657000C1F38 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7950FE1E5C7657000C1F38 /* UIButton.swift */; };
 		EA7951011E5C76A1000C1F38 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7951001E5C76A1000C1F38 /* TextFieldStyle.swift */; };
-		EA7951031E5C7859000C1F38 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7951021E5C7859000C1F38 /* UITextField.swift */; };
 		EA823B801DC798A90011F74D /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA823B761DC798A80011F74D /* Utils.framework */; };
 		EA823B851DC798A90011F74D /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823B841DC798A90011F74D /* UtilsTests.swift */; };
 		EA823B871DC798A90011F74D /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA823B791DC798A80011F74D /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,6 +44,7 @@
 		EAB642AF1E51CF070065AE06 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB642AD1E51CF070065AE06 /* SliderViewController.swift */; };
 		EAB642B01E51CF070065AE06 /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB642AE1E51CF070065AE06 /* SliderViewController.xib */; };
 		EAC22C971DC9EF66003083BA /* SelectableListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC22C961DC9EF66003083BA /* SelectableListTests.swift */; };
+		EACE4E021E5D78AB00DD5D62 /* StyleableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE4E011E5D78AB00DD5D62 /* StyleableButton.swift */; };
 		EAD94B261E4DD3F700A2B90D /* SlideAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD94B251E4DD3F700A2B90D /* SlideAnimationManager.swift */; };
 		EAE127BE1E0AE9D4009F41F5 /* Utils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EAE127BD1E0AE9D4009F41F5 /* Utils.podspec */; };
 		EAF958D21E37761B00EC2FCB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF958D11E37761B00EC2FCB /* UIColor.swift */; };
@@ -90,10 +90,11 @@
 
 /* Begin PBXFileReference section */
 		EA219E771E3210D1005DCB48 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleableTextField.swift; sourceTree = "<group>"; };
 		EA5766B61E390AF000CE6CC4 /* FillableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillableView.swift; sourceTree = "<group>"; };
 		EA5E8BE01E55B1F50083341A /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5E8BE21E55B1F50083341A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA5E8BE41E55B1F50083341A /* AnimationControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationControllers.swift; sourceTree = "<group>"; };
+		EA5E8BE41E55B1F50083341A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA5E8BE71E55B1F60083341A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA5E8BE91E55B1F60083341A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA5E8BEC1E55B1F60083341A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,9 +105,7 @@
 		EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		EA7950F91E5C6A90000C1F38 /* StyleApplicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleApplicable.swift; sourceTree = "<group>"; };
 		EA7950FC1E5C760E000C1F38 /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
-		EA7950FE1E5C7657000C1F38 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		EA7951001E5C76A1000C1F38 /* TextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
-		EA7951021E5C7859000C1F38 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		EA823B761DC798A80011F74D /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA823B791DC798A80011F74D /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		EA823B7A1DC798A80011F74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,6 +131,7 @@
 		EAB642AD1E51CF070065AE06 /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		EAB642AE1E51CF070065AE06 /* SliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderViewController.xib; sourceTree = "<group>"; };
 		EAC22C961DC9EF66003083BA /* SelectableListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableListTests.swift; sourceTree = "<group>"; };
+		EACE4E011E5D78AB00DD5D62 /* StyleableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleableButton.swift; sourceTree = "<group>"; };
 		EAD94B251E4DD3F700A2B90D /* SlideAnimationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideAnimationManager.swift; sourceTree = "<group>"; };
 		EAE127BD1E0AE9D4009F41F5 /* Utils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Utils.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EAF958D11E37761B00EC2FCB /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 		EA5E8BE11E55B1F50083341A /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
-				EA5E8BE41E55B1F50083341A /* AnimationControllers.swift */,
+				EA5E8BE41E55B1F50083341A /* ViewController.swift */,
 				EA5E8BE61E55B1F60083341A /* Main.storyboard */,
 				EA5E8C051E55B6A50083341A /* Resources */,
 			);
@@ -208,6 +208,8 @@
 				EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */,
 				EAB642AD1E51CF070065AE06 /* SliderViewController.swift */,
 				EAB642AE1E51CF070065AE06 /* SliderViewController.xib */,
+				EACE4E011E5D78AB00DD5D62 /* StyleableButton.swift */,
+				EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -280,8 +282,6 @@
 				EA823BA71DC79C480011F74D /* UICollectionReusableView.swift */,
 				EA219E771E3210D1005DCB48 /* UITextView.swift */,
 				EAF958D11E37761B00EC2FCB /* UIColor.swift */,
-				EA7950FE1E5C7657000C1F38 /* UIButton.swift */,
-				EA7951021E5C7859000C1F38 /* UITextField.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -498,7 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA5E8BE51E55B1F50083341A /* AnimationControllers.swift in Sources */,
+				EA5E8BE51E55B1F50083341A /* ViewController.swift in Sources */,
 				EA5E8BE31E55B1F50083341A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,12 +516,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA823BA41DC79BF40011F74D /* ReusableView.swift in Sources */,
+				EACE4E021E5D78AB00DD5D62 /* StyleableButton.swift in Sources */,
 				EA823B9C1DC79AD80011F74D /* ImageAssets.swift in Sources */,
-				EA7951031E5C7859000C1F38 /* UITextField.swift in Sources */,
 				EAD94B261E4DD3F700A2B90D /* SlideAnimationManager.swift in Sources */,
 				EA823BA21DC79BDD0011F74D /* UITableViewCell.swift in Sources */,
 				EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */,
-				EA7950FF1E5C7657000C1F38 /* UIButton.swift in Sources */,
 				EA823B9E1DC79AE60011F74D /* Spinner.swift in Sources */,
 				EA823BB01DC79D1C0011F74D /* Style.swift in Sources */,
 				EAB642AF1E51CF070065AE06 /* SliderViewController.swift in Sources */,
@@ -536,6 +535,7 @@
 				EA823B951DC79A220011F74D /* SegueHandlerType.swift in Sources */,
 				EA823BA81DC79C480011F74D /* UICollectionReusableView.swift in Sources */,
 				EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */,
+				EA3684871E5D7BA1003CEFC5 /* StyleableTextField.swift in Sources */,
 				EA823BA61DC79C0B0011F74D /* NibLoadableView.swift in Sources */,
 				EA823B991DC79A880011F74D /* UINavigationController.swift in Sources */,
 				EA7950FA1E5C6A90000C1F38 /* StyleApplicable.swift in Sources */,
