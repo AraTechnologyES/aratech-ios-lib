@@ -11,7 +11,7 @@ public protocol NotificationNameProvider {
     
     static func add(observer: Any, selector: Selector, forNotification name: NotificationName, object: Any?)
     static func remove(observer: Any, forNotification name: NotificationName, object: Any?)
-    static func post(notification name: NotificationName, object: Any?)
+    static func post(notification name: NotificationName, object: Any?, userInfo: [AnyHashable : Any]?)
 }
 
 extension NotificationNameProvider where NotificationName.RawValue == String {
@@ -24,8 +24,8 @@ extension NotificationNameProvider where NotificationName.RawValue == String {
         NotificationCenter.default.removeObserver(observer, name: NSNotification.Name(name.rawValue), object: object)
     }
     
-    public static func post(notification name: NotificationName, object: Any? = nil) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: name.rawValue), object: object)
+    public static func post(notification name: NotificationName, object: Any? = nil, userInfo: [AnyHashable : Any]? = nil) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: name.rawValue), object: object, userInfo: userInfo)
     }
 }
 
