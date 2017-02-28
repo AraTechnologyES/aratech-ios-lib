@@ -26,12 +26,13 @@ class UtilsTests: XCTestCase {
     }
     
     func testStyle() {
-        let button = UIButton(type: .system)
-        button.apply(style: .login)
-        XCTAssert(button.contentEdgeInsets.top==5.0 && button.contentEdgeInsets.left == 20.0 && button.contentEdgeInsets.bottom == 5 && button.contentEdgeInsets.right == 20.0)
+        let button = StyleableButton(type: .system)
+        button.apply(style: .default)
+        XCTAssert(button.contentEdgeInsets.top==10.0 && button.contentEdgeInsets.left == 20.0 && button.contentEdgeInsets.bottom == 10.0 && button.contentEdgeInsets.right == 20.0)
+        XCTAssert(button.titleColor(for: .selected) == .white && button.titleColor(for: .normal) == .black)
         
-        let textField = UITextField(frame: CGRect.zero)
-        textField.apply(style: .login)
+        let textField = StyleableTextField(frame: CGRect.zero)
+        textField.apply(style: .default)
         XCTAssert(textField.textColor == .white)
     }
     

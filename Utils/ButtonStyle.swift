@@ -14,13 +14,13 @@ public struct ButtonStyle: Style {
     public var cornerRadius:       CGFloat?
     
     /// Imagenes de fondo
-    var backgroundImages:   [(UIImage, UIControlState)]?
+    var backgroundImages:          [(UIImage, UIControlState)]?
     
     /// Color de fondo, `clear` por defecto
     public var backgroundColor:    UIColor
     
     /// Color del titulo, `white` por defecto
-    public var titleColor:         UIColor
+    var titleColors:               [(UIColor,UIControlState)]
     
     /// Fuente del titulo, `nil` por defecto
     public var titleFont:          UIFont?
@@ -33,7 +33,7 @@ public struct ButtonStyle: Style {
             cornerRadius:       CGFloat?                        = nil,
             backgroundImages:   [(UIImage,UIControlState)]?     = nil,
             backgroundColor:    UIColor                         = .clear,
-            titleColor:         UIColor                         = .white,
+            titleColors:        [(UIColor,UIControlState)]      = [(UIColor.black, .normal),(UIColor.white, .selected)],
             titleFont:          UIFont?                         = nil,
             insets:             UIEdgeInsets                    = UIEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)) {
         
@@ -41,7 +41,7 @@ public struct ButtonStyle: Style {
         self.cornerRadius       = cornerRadius
         self.backgroundImages   = backgroundImages
         self.backgroundColor    = backgroundColor
-        self.titleColor         = titleColor
+        self.titleColors        = titleColors
         self.titleFont          = titleFont
         self.insets             = insets
     }

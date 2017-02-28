@@ -49,7 +49,10 @@ public extension StyleApplicable where Self: UIButton, style == ButtonStyle {
             self.titleLabel?.font = titleFont
         }
         
-        self.titleLabel?.textColor = style.titleColor
+        for (color,state) in style.titleColors {
+            self.titleLabel?.textColor = color
+            self.setTitleColor(color, for: state)
+        }
     }
 }
 
