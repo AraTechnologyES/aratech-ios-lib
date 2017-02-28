@@ -29,6 +29,10 @@ public extension StyleApplicable where Self: UIButton, style == ButtonStyle {
         }
 
         if style.roundedBorder {
+            
+            self.clipsToBounds = true
+            self.imageView?.clipsToBounds = true
+            
             if let cornerRadius = style.cornerRadius {
                 self.layer.cornerRadius = cornerRadius
             } else {
@@ -50,7 +54,6 @@ public extension StyleApplicable where Self: UIButton, style == ButtonStyle {
         }
         
         for (color,state) in style.titleColors {
-            self.titleLabel?.textColor = color
             self.setTitleColor(color, for: state)
         }
     }
