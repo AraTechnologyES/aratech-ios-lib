@@ -36,6 +36,12 @@ public extension StyleApplicable where Self: UIButton, style == ButtonStyle {
             }
         }
         
+        if let images = style.backgroundImages {
+            for (image, state) in images {
+                self.setBackgroundImage(image, for: state)
+            }
+        }
+        
         self.backgroundColor = style.backgroundColor
         
         // Hay que comprobar que sea distinta a la que ya hay para evitar bucles con layoutSubviews
