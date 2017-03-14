@@ -45,7 +45,7 @@ public protocol SelectableList: class, Selectable {
     
     /// No manipular directamente, usar metodos de la extensión.
     var state: SelectionState { get set }
-    var items: [SelectableList] { get set }
+    var items: [SelectableList] { get }
     
     /// Descripción del elemento
     var itemDescription: String { get }
@@ -71,14 +71,6 @@ extension SelectableList {
                 return item.itemDescription.localizedCaseInsensitiveContains(filter)
             })
         }
-    }
-    
-    public func add(childList: [SelectableList]) {
-        self.items = childList
-    }
-    
-    public func append(child: SelectableList) {
-        self.items.append(child)
     }
     
     public func getState() -> SelectionState {
