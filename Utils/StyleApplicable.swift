@@ -64,10 +64,21 @@ public extension StyleApplicable where Self: UITextField, style == TextFieldStyl
 
     fileprivate func addBorder(withHeight height: CGFloat = 1.5, color: UIColor = .lightGray) {
         let bottomBorder = CALayer()
+		bottomBorder.accessibilityLabel = "bottomBorder"
         bottomBorder.frame = CGRect(x: 0, y: frame.size.height - 3, width: frame.size.width, height: height)
         bottomBorder.backgroundColor = color.cgColor
         self.layer.addSublayer(bottomBorder)
     }
+	
+	fileprivate func removeBorder() {
+		if let layers = self.layer.sublayers {
+			for layer in layers {
+				if layer.accessibilityLabel == "bottomBorder" {
+					layer.removeFromSuperlayer()
+				}
+			}
+		}
+	}
     
     /**
      Aplica al TextField el estilo proporcionado
@@ -77,6 +88,7 @@ public extension StyleApplicable where Self: UITextField, style == TextFieldStyl
     internal func apply(style: TextFieldStyle) {
         
         if style.bottomLine {
+			removeBorder()
             addBorder(withHeight: style.bottomLineHeight, color: style.bottomLineColor)
         }
         
