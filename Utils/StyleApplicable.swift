@@ -21,7 +21,7 @@ public extension StyleApplicable where Self: UIButton, style == ButtonStyle {
      
      - parameter style: Estilo a aplicar al UIButton
      */
-    internal func apply(style: ButtonStyle) {
+    public func apply(style: ButtonStyle) {
         
         // Hay que comprobar que sea distinta a la que ya hay para evitar bucles con layoutSubviews
         if let insets = style.insets, insets != self.contentEdgeInsets {
@@ -85,7 +85,7 @@ public extension StyleApplicable where Self: UITextField, style == TextFieldStyl
      
      - parameter style: Estilo a aplicar al TextField
      */
-    internal func apply(style: TextFieldStyle) {
+    public func apply(style: TextFieldStyle) {
         
         if style.bottomLine {
 			removeBorder()
