@@ -4,7 +4,13 @@
 
 import UIKit
 
-/// Implementa un slider o galería de imágenes paginada
+/// Implementa un slider o galería de imágenes paginada. Para Instanciar usando esta librería mediante Cocoapods:
+///
+///     let podBundle = Bundle(for: SliderViewController.self)
+///     let bundleURL = podBundle.url(forResource: "Utils", withExtension: "bundle")
+///     let bundle = Bundle(url: bundleURL!)
+///     let slider = SliderViewController(nibName: "SliderViewController", bundle: bundle)
+///
 open class SliderViewController: UIViewController {
     
     /// Imágenes a mostrar
@@ -14,7 +20,7 @@ open class SliderViewController: UIViewController {
         }
     }
     
-    /// Modo de las imágenesuti
+    /// Modo de las imágenes
     public var contentMode: UIViewContentMode = .scaleToFill
     
     /// Vistas suplementarias en cada página
