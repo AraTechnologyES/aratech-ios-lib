@@ -14,13 +14,13 @@ public struct ButtonStyle: Style {
     public var cornerRadius:       CGFloat?
     
     /// Imagenes de fondo
-    var backgroundImages:          [(UIImage, UIControlState)]?
+    public var backgroundImages:          [(UIImage, UIControlState)]?
     
     /// Color de fondo, `clear` por defecto
     public var backgroundColor:    UIColor
     
     /// Color del titulo, `white` por defecto
-    var titleColors:               [(UIColor,UIControlState)]
+    public var titleColors:               [(UIColor,UIControlState)]
     
     /// Fuente del titulo, `nil` por defecto
     public var titleFont:          UIFont?
