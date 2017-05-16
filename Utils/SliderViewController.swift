@@ -22,7 +22,20 @@ open class SliderViewController: UIViewController {
     
     /// Modo de las imágenes
     public var contentMode: UIViewContentMode = .scaleToFill
-    
+	
+	public enum Position {
+		case top
+		case bottom
+	}
+	
+	/// Posición del `pageControl`, abajo por defecto
+	public var pageControlPosition: Position = .bottom {
+		didSet {
+			self.pageControlBottomConstraint?.isActive = self.pageControlPosition == .bottom
+			self.pageControlTopConstraint?.isActive = self.pageControlPosition == .top
+		}
+	}
+	
     /// Vistas suplementarias en cada página
     public var supplementaryViews: [Int:[UIView]] = [:] {
         didSet {
@@ -36,13 +49,7 @@ open class SliderViewController: UIViewController {
     private var pageWidth: CGFloat {
         return self.scrollView.bounds.width
     }
-    
-    // MARK:- API
-    
-    public func scroll(toPage page: Int, animated: Bool = false) {
-        self.scrollView.scrollRectToVisible(CGRect(x: 1+(self.pageWidth*CGFloat(page)), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height), animated: animated)
-    }
-    
+	
     // MARK:- IBOutlets
     
     @IBOutlet fileprivate weak var scrollView: UIScrollView! {
@@ -56,8 +63,30 @@ open class SliderViewController: UIViewController {
             pageControl.hidesForSinglePage = true
         }
     }
+	
+	// MARK:- IBConstraints
+	
+	var pageControlTopConstraint: NSLayoutConstraint!
+	var pageControlBottomConstraint: NSLayoutConstraint!
+	var pageControlCenterConstraint: NSLayoutConstraint!
     
     // MARK:- Private
+	
+	fileprivate func setUpConstraints() {
+		
+		guard self.pageControl != nil, self.scrollView != nil else { return }
+		
+		self.pageControl.constraints.forEach({ $0.isActive = false })
+		
+		self.pageControlTopConstraint = NSLayoutConstraint(item: self.pageControl, attribute: .top, relatedBy: .equal, toItem: self.scrollView, attribute: .top, multiplier: 1.0, constant: 20.0)
+		self.pageControlTopConstraint.isActive = self.pageControlPosition == .top
+		
+		self.pageControlBottomConstraint = NSLayoutConstraint(item: self.pageControl, attribute: .bottom, relatedBy: .equal, toItem: self.scrollView, attribute: .bottom, multiplier: 1.0, constant: -20.0)
+		self.pageControlBottomConstraint.isActive = self.pageControlPosition == .bottom
+
+		self.pageControlCenterConstraint = NSLayoutConstraint(item: self.pageControl, attribute: .centerX, relatedBy: .equal, toItem: self.scrollView, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+		self.pageControlCenterConstraint.isActive = true
+	}
     
     fileprivate func setImagesInScrollView() {
         
@@ -76,7 +105,13 @@ open class SliderViewController: UIViewController {
         
         self.pageControl.numberOfPages = self.images.count
     }
-    
+	
+	// MARK:- API
+	
+	public func scroll(toPage page: Int, animated: Bool = false) {
+		self.scrollView.scrollRectToVisible(CGRect(x: 1+(self.pageWidth*CGFloat(page)), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height), animated: animated)
+	}
+	
     func setSupplementaryViews() {
         
         guard (self.scrollView) != nil else { return }
@@ -100,8 +135,7 @@ open class SliderViewController: UIViewController {
             }
         }
     }
-    
-    
+	
     // MARK:- Life Cicle
     
     override open func viewDidLoad() {
@@ -114,7 +148,8 @@ open class SliderViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         self.scrollView?.frame = CGRect(x:0, y:0, width:self.view.frame.width, height:self.view.frame.height)
-        
+		
+		self.setUpConstraints()
         self.setImagesInScrollView()
         self.setSupplementaryViews()
     }
