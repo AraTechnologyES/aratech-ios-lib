@@ -89,22 +89,28 @@ open class SliderViewController: UIViewController {
 	}
     
     fileprivate func setImagesInScrollView() {
-        
+		
         guard (self.scrollView) != nil else { return }
-        
-        self.scrollView.subviews.forEach { $0.removeFromSuperview() }
-        
-        for (index,image) in images.enumerated() {
-            let imageView = UIImageView(frame: CGRect(x: CGFloat(index)*self.scrollView.frame.width, y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height))
-            imageView.image = image
-            imageView.contentMode = self.contentMode
-            self.scrollView.addSubview(imageView)
-        }
-        
-        self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width*CGFloat(images.count), height: self.scrollView.frame.height)
-        
-        self.pageControl.numberOfPages = self.images.count
-    }
+		
+		DispatchQueue.main.sync {
+			
+			self.scrollView.subviews.forEach { $0.removeFromSuperview() }
+			
+			for (index,image) in images.enumerated() {
+				let imageView = UIImageView(frame: CGRect(x: CGFloat(index)*self.scrollView.frame.width, y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height))
+				imageView.image = image
+				imageView.contentMode = self.contentMode
+				imageView.clipsToBounds = true
+				self.scrollView.addSubview(imageView)
+			}
+			
+			self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width*CGFloat(images.count), height: self.scrollView.frame.height)
+			
+			self.pageControl.numberOfPages = self.images.count
+
+		}
+		
+	}
 	
 	// MARK:- API
 	
