@@ -26,13 +26,13 @@ open class SliderViewController: UIViewController {
 	public enum Position {
 		case top
 		case bottom
+		case hidden
 	}
 	
 	/// Posición del `pageControl`, abajo por defecto
 	public var pageControlPosition: Position = .bottom {
 		didSet {
-			self.pageControlBottomConstraint?.isActive = self.pageControlPosition == .bottom
-			self.pageControlTopConstraint?.isActive = self.pageControlPosition == .top
+			self.setUpConstraints()
 		}
 	}
 	
@@ -86,6 +86,8 @@ open class SliderViewController: UIViewController {
 
 		self.pageControlCenterConstraint = NSLayoutConstraint(item: self.pageControl, attribute: .centerX, relatedBy: .equal, toItem: self.scrollView, attribute: .centerX, multiplier: 1.0, constant: 0.0)
 		self.pageControlCenterConstraint.isActive = true
+		
+		self.pageControl?.isHidden = self.pageControlPosition == .hidden
 	}
     
     fileprivate func setImagesInScrollView() {
