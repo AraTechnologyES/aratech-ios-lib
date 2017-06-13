@@ -11,6 +11,7 @@ import Utils
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var button: StyleableButton! {
         didSet {
             button.style = .default
