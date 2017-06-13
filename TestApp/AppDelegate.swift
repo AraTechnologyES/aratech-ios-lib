@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TestApp
 //
-//  Created by Aratech iOS on 16/2/17.
+//  Created by Nicolas Landa on 16/2/17.
 //  Copyright © 2017 AraTech. All rights reserved.
 //
 
