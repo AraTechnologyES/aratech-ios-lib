@@ -8,34 +8,34 @@
 
 import UIKit
 
-protocol Configurable {
-	var viewModel: Any?
+public protocol Configurable {
+	var viewModel: Any? { get set }
 }
 
-class GenericTableViewController<T, Cell: Configurable>: UITableViewController {
+open class GenericTableViewController<T, Cell: UITableViewCell>: UITableViewController where Cell: Configurable {
 	
-	var viewModel: [T] = [] {
+	public var viewModel: [T] = [] {
 		didSet {
-			tableView.reloadData()
+			tableView?.reloadData()
 		}
 	}
 	
-    override func viewDidLoad() {
+	override open func viewDidLoad() {
         super.viewDidLoad()
 		
 		tableView.estimatedRowHeight = tableView.rowHeight
 		tableView.rowHeight = UITableViewAutomaticDimension
     }
 	
-	init() { super.init(nibName: "GenericTableViewController", bundle: nil) }
-	required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+	public init() { super.init(nibName: "GenericTableViewController", bundle: nil) }
+	required public init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
 	
-	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	override open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return viewModel.count
 	}
 	
-	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as Cell
+	override open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		var cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as Cell
 		cell.viewModel = self.viewModel[indexPath.row]
 		return cell
 	}

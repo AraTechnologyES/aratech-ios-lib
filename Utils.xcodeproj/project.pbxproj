@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2E9981D21EC4A45E00DBCBE4 /* ExpandAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9981D11EC4A45E00DBCBE4 /* ExpandAnimationManager.swift */; };
+		2EBB78CF1EF3ABC900E65F78 /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */; };
+		2EBB78D01EF3ABC900E65F78 /* GenericTableViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */; };
+		2EBB78D11EF3ABC900E65F78 /* SliderViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = EAB642AE1E51CF070065AE06 /* SliderViewController.xib */; };
 		EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA219E771E3210D1005DCB48 /* UITextView.swift */; };
 		EA3684871E5D7BA1003CEFC5 /* StyleableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */; };
 		EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5766B61E390AF000CE6CC4 /* FillableView.swift */; };
@@ -531,6 +534,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EBB78CF1EF3ABC900E65F78 /* GenericTableViewController.swift in Sources */,
+				2EBB78D01EF3ABC900E65F78 /* GenericTableViewController.xib in Sources */,
+				2EBB78D11EF3ABC900E65F78 /* SliderViewController.xib in Sources */,
 				EA823BA41DC79BF40011F74D /* ReusableView.swift in Sources */,
 				EACE4E021E5D78AB00DD5D62 /* StyleableButton.swift in Sources */,
 				EA823B9C1DC79AD80011F74D /* ImageAssets.swift in Sources */,
