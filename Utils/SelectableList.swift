@@ -65,14 +65,17 @@ extension SelectableList {
         }
     }
     
-    public subscript(filter: String) -> [SelectableList] {
-        get {
-            return self.items.filter({ (item) -> Bool in
-                return item.itemDescription.localizedCaseInsensitiveContains(filter)
-            })
-        }
-    }
-    
+	public subscript(filter: String, closure: ((SelectableList, String)->Bool)?) -> [SelectableList] {
+		get {
+			return self.items.filter({ (item) -> Bool in
+				if let filterClosure = closure {
+					return filterClosure(item, filter)
+				}
+				return item.itemDescription.localizedCaseInsensitiveContains(filter)
+			})
+		}
+	}
+	
     public func getState() -> SelectionState {
         if items.count == 0 {
             // Si el elemento es 'hoja', se devuelve directamente su estado
