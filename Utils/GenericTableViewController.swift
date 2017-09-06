@@ -8,10 +8,6 @@
 
 import UIKit
 
-public protocol Configurable {
-	var viewModel: Any? { get set }
-}
-
 open class GenericTableViewController<T, Cell: UITableViewCell>: UITableViewController where Cell: Configurable {
 	
 	public var viewModel: [T] = [] {
@@ -35,8 +31,8 @@ open class GenericTableViewController<T, Cell: UITableViewCell>: UITableViewCont
 	}
 	
 	override open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		var cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as Cell
-		cell.viewModel = self.viewModel[indexPath.row]
+		let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as Cell
+		cell.configure(with: self.viewModel[indexPath.row])
 		return cell
 	}
 }
