@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E9085681F6278F70051BEA3 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9085671F6278F70051BEA3 /* Dispatch.swift */; };
 		2E9981D21EC4A45E00DBCBE4 /* ExpandAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9981D11EC4A45E00DBCBE4 /* ExpandAnimationManager.swift */; };
 		2EBB78CF1EF3ABC900E65F78 /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */; };
 		2EBB78D01EF3ABC900E65F78 /* GenericTableViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */; };
@@ -93,6 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E9085671F6278F70051BEA3 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		2E9981D11EC4A45E00DBCBE4 /* ExpandAnimationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandAnimationManager.swift; sourceTree = "<group>"; };
 		2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
 		2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewController.xib; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				EA823B9F1DC79B750011F74D /* Color.swift */,
 				EA823BAF1DC79D1C0011F74D /* Style.swift */,
 				EA823BB11DC79E6E0011F74D /* Sandbox.swift */,
+				2E9085671F6278F70051BEA3 /* Dispatch.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				EA823BA81DC79C480011F74D /* UICollectionReusableView.swift in Sources */,
 				EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */,
 				EA3684871E5D7BA1003CEFC5 /* StyleableTextField.swift in Sources */,
+				2E9085681F6278F70051BEA3 /* Dispatch.swift in Sources */,
 				EA823BA61DC79C0B0011F74D /* NibLoadableView.swift in Sources */,
 				EA823B991DC79A880011F74D /* UINavigationController.swift in Sources */,
 				EA7950FA1E5C6A90000C1F38 /* StyleApplicable.swift in Sources */,
