@@ -10,10 +10,13 @@ extension UITableViewCell: ReusableView { }
 
 /// Protocolo que define la función configurar. Su uso está orientado a tablas y colecciones.
 public protocol Configurable {
+	
+	associatedtype Model
+	
 	/// Configura al objeto implementador
 	///
 	/// - Parameter model: Modelo con el que configurar el objeto implementador
-	func configure(with model: Any)
+	func configure(with model: Model)
 }
 
 /// Protocolo que define la función registrar. Su uso está orientado a tablas y colecciones.

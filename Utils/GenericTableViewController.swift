@@ -8,8 +8,8 @@
 
 import UIKit
 
-open class GenericTableViewController<T, Cell: UITableViewCell>: UITableViewController where Cell: Configurable {
-	
+open class GenericTableViewController<T, Cell: UITableViewCell>: UITableViewController where Cell: Configurable, Cell.Model == T {
+		
 	public var viewModel: [T] = [] {
 		didSet {
 			tableView?.reloadData()
@@ -32,7 +32,10 @@ open class GenericTableViewController<T, Cell: UITableViewCell>: UITableViewCont
 	
 	override open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as Cell
-		cell.configure(with: self.viewModel[indexPath.row])
+		
+		let model: Cell.Model = self.viewModel[indexPath.row]
+		cell.configure(with: model)
+		
 		return cell
 	}
 }
