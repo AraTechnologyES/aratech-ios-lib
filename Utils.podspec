@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
     
     s.name         = "Utils"
-    s.version      = "1.0.1"
+    s.version      = "1.0.2"
     s.summary      = "Utilities."
     s.description  = "Many utilities i use a lot"
     s.homepage     = "https://github.com/machukas/Utils"
