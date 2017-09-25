@@ -12,7 +12,7 @@
 ///   - queue: Cola donde ejecutar el bloque
 ///   - delay: Si se desea un retraso en la ejecución
 ///   - closure: Bloque a ejecutar
-func execute(in queue: DispatchQueue, delay: DispatchTime? = nil, _ closure: @escaping ()->Void) {
+public func execute(in queue: DispatchQueue, delay: DispatchTime? = nil, _ closure: @escaping ()->Void) {
 	
 	if let delay = delay {
 		// Si hay delay no queda otra que mandarlo a la cola, aunque sea la actual
