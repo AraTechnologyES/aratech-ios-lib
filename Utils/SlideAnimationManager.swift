@@ -39,6 +39,15 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
             }
         }
     }
+	
+	/// Indice de la subvista del snapshot que se oscurece al mostrar el menú lateral
+	var snapshotSubviewIndex: Int {
+		if #available(iOS 11.0, *) {
+			return 0
+		} else {
+			return 1
+		}
+	}
     
     /// Tag para el snapshot de la vista origen
     fileprivate static let snapshotTag = 25
@@ -137,7 +146,7 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
                 toViewController.view.center.x += UIScreen.main.bounds.width * self.width
                 
                 // Se oscurece la vista añadida encima del snapshot para oscurecerlo
-                snapshot?.subviews[1].alpha = self.sourceViewDarkenOpacity
+                snapshot?.subviews[self.snapshotSubviewIndex].alpha = self.sourceViewDarkenOpacity
                 
             case .dismiss:
                 if !transitionContext.transitionWasCancelled {
@@ -145,7 +154,7 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
                     fromViewController.view.center.x -= fromViewController.view.bounds.width
                     
                     // Se transparenta la vista añadida encima del snapshot para aclararla
-                    snapshot?.subviews[1].alpha = 0
+                    snapshot?.subviews[self.snapshotSubviewIndex].alpha = 0
                 }
             }
             
