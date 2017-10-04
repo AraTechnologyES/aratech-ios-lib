@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
     
     s.platform     = :ios
     s.ios.deployment_target = '9.0'
+	s.xcconfig = { 'SWIFT_VERSION' => '4.0' }
     
     s.source       = { :git => 'https://github.com/machukas/Utils.git' }
     
