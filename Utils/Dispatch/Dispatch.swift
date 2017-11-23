@@ -1,10 +1,6 @@
 //
 //  Dispatch.swift
 //  Utils
-//
-//  Created by Aratech iOS on 8/9/17.
-//  Copyright © 2017 AraTech. All rights reserved.
-//
 
 /// Ejecuta el bloque en la cola especificada
 ///

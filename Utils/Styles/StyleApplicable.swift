@@ -103,7 +103,7 @@ public extension StyleApplicable where Self: UITextField, style == TextFieldStyl
             let placeholderText = placeholder {
             
             let attributedPlaceholder = NSMutableAttributedString.init(string: placeholderText)
-            attributedPlaceholder.addAttribute(NSAttributedStringKey.foregroundColor, value: placeHolderTextColor, range: NSMakeRange(0, placeholderText.characters.count))
+            attributedPlaceholder.addAttribute(NSAttributedStringKey.foregroundColor, value: placeHolderTextColor, range: NSMakeRange(0, placeholderText.count))
             
             self.attributedPlaceholder = attributedPlaceholder
         }

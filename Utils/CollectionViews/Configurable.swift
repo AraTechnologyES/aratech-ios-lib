@@ -1,12 +1,6 @@
 //
-//  UITableViewCell.swift
+//  Configurable.swift
 //  Utils
-
-import Foundation
-
-extension UITableViewCell: NibLoadableView { }
-
-extension UITableViewCell: ReusableView { }
 
 /// Protocolo que define la función configurar. Su uso está orientado a tablas y colecciones.
 public protocol Configurable {
@@ -30,10 +24,4 @@ public protocol Registrable {
 	///
 	/// - Parameter tableView: Tabla en la que registrar al objeto implementador
 	static func register(in tableView: UITableView)
-}
-
-public extension Registrable where Self: UITableViewCell {
-	static func register(in tableView: UITableView) {
-		tableView.register(Self.self)
-	}
 }
