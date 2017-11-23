@@ -39,7 +39,6 @@
 		EA823B971DC79A4C0011F74D /* Notificable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823B961DC79A4C0011F74D /* Notificable.swift */; };
 		EA823B991DC79A880011F74D /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823B981DC79A880011F74D /* UINavigationController.swift */; };
 		EA823B9C1DC79AD80011F74D /* ImageAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823B9B1DC79AD80011F74D /* ImageAssets.swift */; };
-		EA823B9E1DC79AE60011F74D /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823B9D1DC79AE60011F74D /* Spinner.swift */; };
 		EA823BA01DC79B750011F74D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823B9F1DC79B750011F74D /* Color.swift */; };
 		EA823BA21DC79BDD0011F74D /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823BA11DC79BDD0011F74D /* UITableViewCell.swift */; };
 		EA823BA41DC79BF40011F74D /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA823BA31DC79BF40011F74D /* ReusableView.swift */; };
@@ -134,7 +133,6 @@
 		EA823B961DC79A4C0011F74D /* Notificable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notificable.swift; sourceTree = "<group>"; };
 		EA823B981DC79A880011F74D /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		EA823B9B1DC79AD80011F74D /* ImageAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAssets.swift; sourceTree = "<group>"; };
-		EA823B9D1DC79AE60011F74D /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		EA823B9F1DC79B750011F74D /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		EA823BA11DC79BDD0011F74D /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		EA823BA31DC79BF40011F74D /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -245,17 +243,80 @@
 				EA823BA11DC79BDD0011F74D /* UITableViewCell.swift */,
 				EA823BAB1DC79C8A0011F74D /* UICollectionView.swift */,
 				EA823BA71DC79C480011F74D /* UICollectionReusableView.swift */,
+				2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */,
+				2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */,
+				EA823BAD1DC79CB00011F74D /* SelectableList.swift */,
 			);
 			path = CollectionViews;
 			sourceTree = "<group>";
 		};
-		2ECC2F881EEFFE1C00658D87 /* Generics */ = {
+		2E1497B21FC71C1100C635D1 /* Segue */ = {
 			isa = PBXGroup;
 			children = (
-				2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */,
-				2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */,
+				EA823B941DC79A220011F74D /* SegueHandlerType.swift */,
 			);
-			name = Generics;
+			path = Segue;
+			sourceTree = "<group>";
+		};
+		2E1497B31FC71C3300C635D1 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				EAF958D11E37761B00EC2FCB /* UIColor.swift */,
+				EA823B9F1DC79B750011F74D /* Color.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		2E1497B41FC71C5D00C635D1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA823B911DC799B50011F74D /* UIViewController.swift */,
+				EA823B981DC79A880011F74D /* UINavigationController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2E1497B51FC71CEE00C635D1 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				EA823BB11DC79E6E0011F74D /* Sandbox.swift */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		2E1497B61FC71D9300C635D1 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				EAD94B251E4DD3F700A2B90D /* SlideAnimationManager.swift */,
+				2E9981D11EC4A45E00DBCBE4 /* ExpandAnimationManager.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		2E1497B71FC71E9300C635D1 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				EAB642AD1E51CF070065AE06 /* SliderViewController.swift */,
+				EAB642AE1E51CF070065AE06 /* SliderViewController.xib */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
+		2E1497B81FC71F4800C635D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA5766B61E390AF000CE6CC4 /* FillableView.swift */,
+				EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E1497B91FC71FBB00C635D1 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				EA219E771E3210D1005DCB48 /* UITextView.swift */,
+			);
+			path = TextView;
 			sourceTree = "<group>";
 		};
 		EA5E8BE11E55B1F50083341A /* TestApp */ = {
@@ -286,17 +347,6 @@
 				EA5E8BEE1E55B1F60083341A /* Info.plist */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		EA63D1F01DCCAE0C000394E2 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				EA5766B61E390AF000CE6CC4 /* FillableView.swift */,
-				EA63D1EE1DCCADDC000394E2 /* RoundedImageView.swift */,
-				EAB642AD1E51CF070065AE06 /* SliderViewController.swift */,
-				EAB642AE1E51CF070065AE06 /* SliderViewController.xib */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		EA823B6C1DC798A80011F74D = {
@@ -330,12 +380,14 @@
 				2E1497AD1FC707E100C635D1 /* Assets */,
 				2E1497AE1FC707F100C635D1 /* Notifications */,
 				2E1497AF1FC7083400C635D1 /* CollectionViews */,
-				EAD94B241E4DD35900A2B90D /* Animations */,
-				EA823B9A1DC79AA60011F74D /* Utils */,
-				2ECC2F881EEFFE1C00658D87 /* Generics */,
-				EA63D1F01DCCAE0C000394E2 /* Views */,
-				EA823B931DC799B80011F74D /* Protocols */,
-				EA823B901DC7994E0011F74D /* Extensions */,
+				2E1497B31FC71C3300C635D1 /* Color */,
+				2E1497B41FC71C5D00C635D1 /* ViewController */,
+				2E1497B61FC71D9300C635D1 /* Animations */,
+				2E1497B51FC71CEE00C635D1 /* Documents */,
+				2E1497B71FC71E9300C635D1 /* Slider */,
+				2E1497B21FC71C1100C635D1 /* Segue */,
+				2E1497B81FC71F4800C635D1 /* Views */,
+				2E1497B91FC71FBB00C635D1 /* TextView */,
 				EA823B791DC798A80011F74D /* Utils.h */,
 				EA823B7A1DC798A80011F74D /* Info.plist */,
 				EAE127BD1E0AE9D4009F41F5 /* Utils.podspec */,
@@ -351,45 +403,6 @@
 				EA823B861DC798A90011F74D /* Info.plist */,
 			);
 			path = UtilsTests;
-			sourceTree = "<group>";
-		};
-		EA823B901DC7994E0011F74D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				EA823B911DC799B50011F74D /* UIViewController.swift */,
-				EA823B981DC79A880011F74D /* UINavigationController.swift */,
-				EA219E771E3210D1005DCB48 /* UITextView.swift */,
-				EAF958D11E37761B00EC2FCB /* UIColor.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		EA823B931DC799B80011F74D /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				EA823BAD1DC79CB00011F74D /* SelectableList.swift */,
-				EA823B941DC79A220011F74D /* SegueHandlerType.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		EA823B9A1DC79AA60011F74D /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				EA823B9D1DC79AE60011F74D /* Spinner.swift */,
-				EA823B9F1DC79B750011F74D /* Color.swift */,
-				EA823BB11DC79E6E0011F74D /* Sandbox.swift */,
-			);
-			name = Utils;
-			sourceTree = "<group>";
-		};
-		EAD94B241E4DD35900A2B90D /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				EAD94B251E4DD3F700A2B90D /* SlideAnimationManager.swift */,
-				2E9981D11EC4A45E00DBCBE4 /* ExpandAnimationManager.swift */,
-			);
-			name = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,7 +613,6 @@
 				EAD94B261E4DD3F700A2B90D /* SlideAnimationManager.swift in Sources */,
 				EA823BA21DC79BDD0011F74D /* UITableViewCell.swift in Sources */,
 				EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */,
-				EA823B9E1DC79AE60011F74D /* Spinner.swift in Sources */,
 				EA823BB01DC79D1C0011F74D /* Style.swift in Sources */,
 				EAB642AF1E51CF070065AE06 /* SliderViewController.swift in Sources */,
 				EA823BA01DC79B750011F74D /* Color.swift in Sources */,

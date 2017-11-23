@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
     
     s.name         = "Utils"
-    s.version      = "1.0.5"
+    s.version      = "1.0.6"
     s.summary      = "Utilities."
     s.description  = "Many utilities i use a lot"
     s.homepage     = "https://github.com/machukas/Utils"
@@ -28,5 +28,67 @@ Pod::Spec.new do |s|
     s.resource_bundles = {
         'Utils' => ['Utils/**/*.{storyboard,xib}']
     }
-    
+	
+	s.subspec 'Logger' do |s|
+		s.source_files = "Utils/Logger/*.swift"
+	end
+	
+	s.subspec 'Styles' do |s|
+		s.source_files = "Utils/Styles/*.swift"
+	end
+	
+	s.subspec 'Dispatch' do |s|
+		s.source_files = "Utils/Dispatch/*.swift"
+	end
+	
+	s.subspec 'Notifications' do |s|
+		s.source_files = "Utils/Notifications/*.swift"
+	end
+	
+	s.subspec 'Assets' do |s|
+		s.source_files = "Utils/Assets/*.swift"
+	end
+	
+	s.subspec 'CollectionViews' do |s|
+		s.source_files = "Utils/CollectionViews/*.swift"
+		s.resource_bundles = {
+			'CollectionViews' => ['Utils/CollectionViews/*.xib']
+		}
+	end
+	
+	s.subspec 'Color' do |s|
+		s.source_files = "Utils/Color/*.swift"
+	end
+	
+	s.subspec 'ViewController' do |s|
+		s.source_files = "Utils/ViewController/*.swift"
+	end
+	
+	s.subspec 'Animations' do |s|
+		s.source_files = "Utils/Animations/*.swift"
+	end
+	
+	s.subspec 'Documents' do |s|
+		s.source_files = "Utils/Documents/*.swift"
+	end
+	
+	s.subspec 'Slider' do |s|
+		s.source_files = "Utils/CollectionViews/*.swift"
+		s.resource_bundles = {
+			'Slider' => ['Utils/Slider/*.xib']
+		}
+	end
+	
+	s.subspec 'Segue' do |s|
+		s.source_files = "Utils/Segue/*.swift"
+	end
+	
+	s.subspec 'Views' do |s|
+		s.source_files = "Utils/Views/*.swift"
+	end
+	
+	s.subspec 'TextView' do |s|
+		s.source_files = "Utils/TextView/*.swift"
+	end
+	
 end
