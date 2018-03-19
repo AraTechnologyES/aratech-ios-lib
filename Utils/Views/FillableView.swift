@@ -37,28 +37,7 @@ import UIKit
             self.layoutSubviews()
         }
     }
-    
-    /// Anchura del borde. El valor por defecto es `2.0`
-    @IBInspectable public var borderWidth: CGFloat = 2 {
-        didSet {
-            
-            guard borderWidth != oldValue else { return }
-            
-            self.layer.borderWidth = borderWidth
-            self.layoutSubviews()
-        }
-    }
-    
-    /// Color del borde. El valor por defecto es `.black`
-    @IBInspectable public var borderColor: UIColor = .black {
-        didSet {
-            
-            guard borderColor != oldValue else { return }
-            
-            self.layer.borderColor = borderColor.cgColor
-        }
-    }
-    
+	
     /// Margen entre el borde y el relleno. El valor por defecto es `2.0`
     @IBInspectable public var margin: CGFloat = 2 {
         didSet {
@@ -115,7 +94,7 @@ import UIKit
     private func initSubviews() {
         
         self.layer.backgroundColor = UIColor.clear.cgColor
-        self.layer.borderColor = self.borderColor.cgColor
+		self.layer.borderColor = self.borderColor?.cgColor
         self.layer.borderWidth = self.borderWidth
         
         if self.isCircular {
