@@ -16,10 +16,15 @@ import Foundation
 /// - `warning`: Warning conditions
 /// - `error`: Error conditions
 public enum Severity: Int, CustomStringConvertible {
+	/// **debug**<`info`
 	case debug
+	/// `debug`<**info**<`notice`
 	case info
+	/// `info`<**notice**<`warning`
 	case notice
+	/// `notice`<**warning**<`error`
 	case warning
+	/// `warning`<**error**
 	case error
 	
 	public var description: String {
