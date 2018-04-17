@@ -7,26 +7,22 @@
 //
 
 import UIKit
-import Utils
+import ATLibrary
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var button: StyleableButton! {
-        didSet {
-            button.style = .default
-        }
-    }
-    
-    @IBOutlet weak var textField: StyleableTextField! {
-        didSet {
-            textField.style = .default
-        }
-    }
-    
-    
+	
+	var callback: DelegatedCall<String>?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+		
+		let a = "asdas"
+		
+		callback?.delegate(to: self, with: { (self, string) in
+			
+		})
+		
+		callback?.callback?("")
     }
 }

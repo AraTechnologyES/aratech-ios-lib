@@ -1,13 +1,13 @@
 //
 //  ResultTests.swift
-//  UtilsTests
+//  ATLibraryTests
 //
 //  Created by Nicolás Landa on 17/4/18.
 //  Copyright © 2018 AraTech. All rights reserved.
 //
 
 import XCTest
-@testable import Utils
+@testable import ATLibrary
 class ResultTests: XCTestCase {
 	
 	struct NetworkError: Error {

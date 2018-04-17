@@ -1,12 +1,12 @@
 //
-//  UtilsTests.swift
-//  UtilsTests
+//  ATLibraryTests.swift
+//  ATLibraryTests
 //
 
 import XCTest
-@testable import Utils
+@testable import ATLibrary
 
-class UtilsTests: XCTestCase {
+class ATLibraryTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

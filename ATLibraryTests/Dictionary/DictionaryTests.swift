@@ -1,9 +1,9 @@
 //
 //  DictionaryTests.swift
-//  UtilsTests
+//  ATLibraryTests
 
 import XCTest
-@testable import Utils
+@testable import ATLibrary
 
 class DictionaryTests: XCTestCase {
     
