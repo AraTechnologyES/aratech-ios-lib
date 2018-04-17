@@ -10,6 +10,12 @@ import Foundation
 
 public struct Logger {
 	
+	/// Instancia compartida configurada para debug
+	public static let shared: Logger = {
+		let logger = Logger(withLevel: .debug, mode: .debug)
+		return logger
+	}()
+	
 	internal static let dateFormatter: DateFormatter = {
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
