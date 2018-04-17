@@ -41,10 +41,15 @@ Ejemplo de utilización:
 */
 public struct DelegatedCall<Input> {
 	
-	typealias CallbackBlock = ((Input) -> Void)?
-	private(set) var callback: CallbackBlock
+	public typealias CallbackBlock = ((Input) -> Void)?
+	private(set) public var callback: CallbackBlock
 	
-	mutating func delegate<Object: AnyObject>(to object: Object, with callback: @escaping (Object, Input) -> Void) {
+	/// Establece el callback
+	///
+	/// - Parameters:
+	///   - object: Objeto a capturar
+	///   - callback: Función a asignar al callback
+	mutating public func delegate<Object: AnyObject>(to object: Object, with callback: @escaping (Object, Input) -> Void) {
 		self.callback = { [weak object] input in
 			guard let object = object else { return }
 			callback(object, input)
