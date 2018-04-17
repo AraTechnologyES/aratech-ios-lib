@@ -1,6 +1,6 @@
 //
 //  ImageAssets.swift
-//  Utils
+//  ATLibrary
 
 import Foundation
 

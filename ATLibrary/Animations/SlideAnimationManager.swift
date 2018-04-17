@@ -1,6 +1,6 @@
 //
 //  SlideAnimationManager.swift
-//  Utils
+//  ATLibrary
 //
 //  Credits:    - https://www.thorntech.com/2016/03/ios-tutorial-make-interactive-slide-menu-swift/
 //

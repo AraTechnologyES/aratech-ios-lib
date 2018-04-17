@@ -3,7 +3,7 @@
 //  ATLibraryTests
 //
 //  Created by Aratech iOS on 20/3/18.
-//  Copyright © 2018 AraTech. All rights reserved.
+//  
 //
 
 import XCTest

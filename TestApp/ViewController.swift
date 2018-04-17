@@ -3,7 +3,7 @@
 //  TestApp
 //
 //  Created by Nicolas Landa on 16/2/17.
-//  Copyright © 2017 AraTech. All rights reserved.
+//  
 //
 
 import UIKit

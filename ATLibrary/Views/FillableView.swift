@@ -1,6 +1,6 @@
 //
 //  FillableCircleView.swift
-//  Utils
+//  ATLibrary
 //
 //  Animation credit to: http://stackoverflow.com/a/36461202/5014794
 

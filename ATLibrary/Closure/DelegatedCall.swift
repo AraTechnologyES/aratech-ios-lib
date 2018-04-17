@@ -3,7 +3,7 @@
 //  https://medium.com/anysuggestion/preventing-memory-leaks-with-swift-compile-time-safety-49b845df4dc6
 //
 //  Created by Nicolás Landa on 17/4/18.
-//  Copyright © 2018 Nicolás Landa. All rights reserved.
+//  
 //
 
 /**

@@ -3,7 +3,7 @@
 //  ATLibraryTests
 //
 //  Created by Nicolás Landa on 17/4/18.
-//  Copyright © 2018 AraTech. All rights reserved.
+//  
 //
 
 import XCTest

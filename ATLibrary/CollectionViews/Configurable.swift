@@ -1,6 +1,6 @@
 //
 //  Configurable.swift
-//  Utils
+//  ATLibrary
 
 /// Protocolo que define la función configurar. Su uso está orientado a tablas y colecciones.
 public protocol Configurable {

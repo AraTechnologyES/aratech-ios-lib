@@ -1,6 +1,6 @@
 //
 //  SliderViewController.swift
-//  Utils
+//  ATLibrary
 
 import UIKit
 

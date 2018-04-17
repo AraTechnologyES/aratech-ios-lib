@@ -3,7 +3,7 @@
 //  GenericTableView
 //
 //  Created by Nicolas Landa on 13/6/17.
-//  Copyright © 2017 Nicolas Landa. All rights reserved.
+//  
 //
 
 import UIKit

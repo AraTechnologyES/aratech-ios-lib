@@ -2,7 +2,7 @@
 //  FileDownloadManager.swift
 //
 //  Created by Nicolás Landa on 20/2/18.
-//  Copyright © 2018 Nicolás Landa. All rights reserved.
+//  
 //
 
 import Foundation
