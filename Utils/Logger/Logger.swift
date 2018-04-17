@@ -78,6 +78,11 @@ public struct Logger {
 		self.log(text, in: .error, evenInReleaseMode: writeAnyways, sourceFile: fileName, functionName: functionName, lineNumber: lineNumber)
 	}
 	
+	/// Registra el error en el log con nivel `warning`<**error**
+	public func error(error: Error) {
+		self.error(error.localizedDescription)
+	}
+	
 	/// Registra en el log el texto especificado. Si no se concreta el nivel de log, se tomará el utilizado al instanciar la clase.
 	///
 	/// - Parameters:
