@@ -44,6 +44,10 @@ public struct DelegatedCall<Input> {
 	public typealias CallbackBlock = ((Input) -> Void)?
 	private(set) public var callback: CallbackBlock
 	
+	public init() {
+		self.callback = nil
+	}
+	
 	/// Establece el callback
 	///
 	/// - Parameters:
