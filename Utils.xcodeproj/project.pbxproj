@@ -26,6 +26,7 @@
 		2EBB78CF1EF3ABC900E65F78 /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */; };
 		2EBB78D01EF3ABC900E65F78 /* GenericTableViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */; };
 		2EBB78D11EF3ABC900E65F78 /* SliderViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = EAB642AE1E51CF070065AE06 /* SliderViewController.xib */; };
+		2EF93A202085E28700225844 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A1F2085E28000225844 /* AsyncOperation.swift */; };
 		2EF93A232085E96C00225844 /* FileDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A222085E96500225844 /* FileDownloadManager.swift */; };
 		EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA219E771E3210D1005DCB48 /* UITextView.swift */; };
 		EA3684871E5D7BA1003CEFC5 /* StyleableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */; };
@@ -123,6 +124,7 @@
 		2EB67BC9206018A800A278D4 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
 		2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewController.xib; sourceTree = "<group>"; };
+		2EF93A1F2085E28000225844 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		2EF93A222085E96500225844 /* FileDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloadManager.swift; sourceTree = "<group>"; };
 		EA219E771E3210D1005DCB48 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleableTextField.swift; sourceTree = "<group>"; };
@@ -374,6 +376,14 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
+		2EF93A1E2085E22100225844 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				2EF93A1F2085E28000225844 /* AsyncOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
 		2EF93A212085E95B00225844 /* Downloads */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				2EF93A212085E95B00225844 /* Downloads */,
+				2EF93A1E2085E22100225844 /* Operations */,
 				2E6910DC2073602800EDDB78 /* Dictionary */,
 				2E1497A31FC7000100C635D1 /* Logger */,
 				2E1497AA1FC706FD00C635D1 /* Styles */,
@@ -683,6 +694,7 @@
 				2EBB78CF1EF3ABC900E65F78 /* GenericTableViewController.swift in Sources */,
 				2E6910DE207362CA00EDDB78 /* Dictionary.swift in Sources */,
 				2EBB78D01EF3ABC900E65F78 /* GenericTableViewController.xib in Sources */,
+				2EF93A202085E28700225844 /* AsyncOperation.swift in Sources */,
 				2EBB78D11EF3ABC900E65F78 /* SliderViewController.xib in Sources */,
 				EA823BA41DC79BF40011F74D /* ReusableView.swift in Sources */,
 				2E1497A81FC7004E00C635D1 /* Logger.swift in Sources */,
