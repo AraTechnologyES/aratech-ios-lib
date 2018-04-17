@@ -21,10 +21,16 @@ public struct Sandbox {
 	
 	*/
 	public struct ApplicationSupport {
+		
 		/// Raiz del directorio de soporte
 		public static var root: URL {
 			let appBundleID = Bundle.main.bundleIdentifier!
 			return try! FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(appBundleID, isDirectory: true)
+		}
+		
+		/// Directorio para las descargas
+		public static var downloads: URL {
+			return root.appendingPathComponent("downloads", isDirectory: true)
 		}
 	}
 }
