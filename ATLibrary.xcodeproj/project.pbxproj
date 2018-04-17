@@ -34,6 +34,7 @@
 		2EF93A2F20861AF700225844 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A2E20861AF700225844 /* ResultTests.swift */; };
 		2EF93A3020861EE500225844 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA823B7A1DC798A80011F74D /* Info.plist */; };
 		2EF93A31208620D700225844 /* Instantiable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB4BE3C2060FBA300516A12 /* Instantiable.storyboard */; };
+		2EF93A352086241800225844 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2EF93A342086241800225844 /* README.md */; };
 		EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA219E771E3210D1005DCB48 /* UITextView.swift */; };
 		EA3684871E5D7BA1003CEFC5 /* StyleableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */; };
 		EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5766B61E390AF000CE6CC4 /* FillableView.swift */; };
@@ -128,6 +129,7 @@
 		2EF93A282086080A00225844 /* DelegatedCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatedCallTests.swift; sourceTree = "<group>"; };
 		2EF93A2B208608F900225844 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		2EF93A2E20861AF700225844 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
+		2EF93A342086241800225844 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		EA219E771E3210D1005DCB48 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleableTextField.swift; sourceTree = "<group>"; };
 		EA5766B61E390AF000CE6CC4 /* FillableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillableView.swift; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 				EA823B791DC798A80011F74D /* ATLibrary.h */,
 				EA823B7A1DC798A80011F74D /* Info.plist */,
 				EAE127BD1E0AE9D4009F41F5 /* Utils.podspec */,
+				2EF93A342086241800225844 /* README.md */,
 			);
 			path = ATLibrary;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 			files = (
 				EAE127BE1E0AE9D4009F41F5 /* Utils.podspec in Resources */,
 				EAB642B01E51CF070065AE06 /* SliderViewController.xib in Resources */,
+				2EF93A352086241800225844 /* README.md in Resources */,
 				2EF93A3020861EE500225844 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

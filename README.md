@@ -1,4 +1,15 @@
-# Utils
-Swift Utils
+# ATLibrary iOS
 
-Utils that i use a lot, most of them founded online (Natasha the Robot, Jesse Squire, etc).
+----
+
+![Language](https://img.shields.io/badge/Language-Swift-orange.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+Main library for Aratech iOS projects
+
+## How to add it to my project
+
+Through Carthage
+
+```
+github "AraTechnologyES/aratech-ios-lib"
