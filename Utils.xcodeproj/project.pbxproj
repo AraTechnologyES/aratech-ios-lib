@@ -29,6 +29,8 @@
 		2EF93A202085E28700225844 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A1F2085E28000225844 /* AsyncOperation.swift */; };
 		2EF93A232085E96C00225844 /* FileDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A222085E96500225844 /* FileDownloadManager.swift */; };
 		2EF93A262085F93200225844 /* DelegatedCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A252085F93200225844 /* DelegatedCall.swift */; };
+		2EF93A2C208608F900225844 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A2B208608F900225844 /* Result.swift */; };
+		2EF93A2F20861AF700225844 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A2E20861AF700225844 /* ResultTests.swift */; };
 		EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA219E771E3210D1005DCB48 /* UITextView.swift */; };
 		EA3684871E5D7BA1003CEFC5 /* StyleableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */; };
 		EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5766B61E390AF000CE6CC4 /* FillableView.swift */; };
@@ -128,6 +130,8 @@
 		2EF93A1F2085E28000225844 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		2EF93A222085E96500225844 /* FileDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloadManager.swift; sourceTree = "<group>"; };
 		2EF93A252085F93200225844 /* DelegatedCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatedCall.swift; sourceTree = "<group>"; };
+		2EF93A2B208608F900225844 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2EF93A2E20861AF700225844 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		EA219E771E3210D1005DCB48 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleableTextField.swift; sourceTree = "<group>"; };
 		EA5766B61E390AF000CE6CC4 /* FillableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillableView.swift; sourceTree = "<group>"; };
@@ -402,6 +406,22 @@
 			path = Closure;
 			sourceTree = "<group>";
 		};
+		2EF93A2A208608D300225844 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				2EF93A2B208608F900225844 /* Result.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		2EF93A2D20861AE100225844 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				2EF93A2E20861AF700225844 /* ResultTests.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
 		EA5E8BE11E55B1F50083341A /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,6 +477,7 @@
 		EA823B781DC798A80011F74D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2EF93A2A208608D300225844 /* Result */,
 				2EF93A242085F92200225844 /* Closure */,
 				2EF93A212085E95B00225844 /* Downloads */,
 				2EF93A1E2085E22100225844 /* Operations */,
@@ -485,6 +506,7 @@
 		EA823B831DC798A90011F74D /* UtilsTests */ = {
 			isa = PBXGroup;
 			children = (
+				2EF93A2D20861AE100225844 /* Result */,
 				2E6910DF2073645700EDDB78 /* Dictionary */,
 				2EB4BE3E2061698800516A12 /* Logger */,
 				2EB4BE3B2060FB8F00516A12 /* InstantiableTests */,
@@ -676,6 +698,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF93A2F20861AF700225844 /* ResultTests.swift in Sources */,
 				2E6910F12073667400EDDB78 /* DictionaryTests.swift in Sources */,
 				2E6910F22073667700EDDB78 /* LoggerTests.swift in Sources */,
 				2E6910F32073667A00EDDB78 /* InstantiableTests.swift in Sources */,
@@ -714,6 +737,7 @@
 				EACE4E021E5D78AB00DD5D62 /* StyleableButton.swift in Sources */,
 				2E1497B11FC708CB00C635D1 /* Configurable.swift in Sources */,
 				EA823B9C1DC79AD80011F74D /* ImageAssets.swift in Sources */,
+				2EF93A2C208608F900225844 /* Result.swift in Sources */,
 				EAD94B261E4DD3F700A2B90D /* SlideAnimationManager.swift in Sources */,
 				2EB67BCB206018A900A278D4 /* ShadowRoundedView.swift in Sources */,
 				EA823BA21DC79BDD0011F74D /* UITableViewCell.swift in Sources */,
