@@ -378,12 +378,12 @@
 			path = Operations;
 			sourceTree = "<group>";
 		};
-		2EF93A212085E95B00225844 /* Downloads */ = {
+		2EF93A212085E95B00225844 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				2EF93A222085E96500225844 /* FileDownloadManager.swift */,
 			);
-			path = Downloads;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		2EF93A242085F92200225844 /* Closure */ = {
@@ -464,7 +464,7 @@
 			children = (
 				2EF93A2A208608D300225844 /* Result */,
 				2EF93A242085F92200225844 /* Closure */,
-				2EF93A212085E95B00225844 /* Downloads */,
+				2EF93A212085E95B00225844 /* Network */,
 				2EF93A1E2085E22100225844 /* Operations */,
 				2E6910DC2073602800EDDB78 /* Dictionary */,
 				2E1497A31FC7000100C635D1 /* Logger */,
