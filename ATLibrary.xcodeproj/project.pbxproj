@@ -69,7 +69,6 @@
 		EAB642B01E51CF070065AE06 /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB642AE1E51CF070065AE06 /* SliderViewController.xib */; };
 		EACE4E021E5D78AB00DD5D62 /* StyleableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE4E011E5D78AB00DD5D62 /* StyleableButton.swift */; };
 		EAD94B261E4DD3F700A2B90D /* SlideAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD94B251E4DD3F700A2B90D /* SlideAnimationManager.swift */; };
-		EAE127BE1E0AE9D4009F41F5 /* Utils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EAE127BD1E0AE9D4009F41F5 /* Utils.podspec */; };
 		EAF958D21E37761B00EC2FCB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF958D11E37761B00EC2FCB /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -169,7 +168,6 @@
 		EAC22C961DC9EF66003083BA /* SelectableListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectableListTests.swift; sourceTree = "<group>"; };
 		EACE4E011E5D78AB00DD5D62 /* StyleableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleableButton.swift; sourceTree = "<group>"; };
 		EAD94B251E4DD3F700A2B90D /* SlideAnimationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideAnimationManager.swift; sourceTree = "<group>"; };
-		EAE127BD1E0AE9D4009F41F5 /* Utils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Utils.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EAF958D11E37761B00EC2FCB /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -483,7 +481,6 @@
 				2E1497B91FC71FBB00C635D1 /* TextView */,
 				EA823B791DC798A80011F74D /* ATLibrary.h */,
 				EA823B7A1DC798A80011F74D /* Info.plist */,
-				EAE127BD1E0AE9D4009F41F5 /* Utils.podspec */,
 				2EF93A342086241800225844 /* README.md */,
 			);
 			path = ATLibrary;
@@ -642,7 +639,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE127BE1E0AE9D4009F41F5 /* Utils.podspec in Resources */,
 				EAB642B01E51CF070065AE06 /* SliderViewController.xib in Resources */,
 				2EF93A352086241800225844 /* README.md in Resources */,
 				2EF93A3020861EE500225844 /* Info.plist in Resources */,
