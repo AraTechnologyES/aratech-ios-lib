@@ -35,6 +35,7 @@
 		2EF93A3020861EE500225844 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA823B7A1DC798A80011F74D /* Info.plist */; };
 		2EF93A31208620D700225844 /* Instantiable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB4BE3C2060FBA300516A12 /* Instantiable.storyboard */; };
 		2EF93A352086241800225844 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2EF93A342086241800225844 /* README.md */; };
+		2EF93A382087325900225844 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A372087325900225844 /* ImageDownloader.swift */; };
 		EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA219E771E3210D1005DCB48 /* UITextView.swift */; };
 		EA3684871E5D7BA1003CEFC5 /* StyleableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */; };
 		EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5766B61E390AF000CE6CC4 /* FillableView.swift */; };
@@ -129,6 +130,7 @@
 		2EF93A2B208608F900225844 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		2EF93A2E20861AF700225844 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		2EF93A342086241800225844 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		2EF93A372087325900225844 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		EA219E771E3210D1005DCB48 /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EA3684861E5D7BA1003CEFC5 /* StyleableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleableTextField.swift; sourceTree = "<group>"; };
 		EA5766B61E390AF000CE6CC4 /* FillableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillableView.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				2EF93A222085E96500225844 /* FileDownloadManager.swift */,
+				2EF93A372087325900225844 /* ImageDownloader.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				EA823BA21DC79BDD0011F74D /* UITableViewCell.swift in Sources */,
 				EA5766B71E390AF000CE6CC4 /* FillableView.swift in Sources */,
 				EA823BB01DC79D1C0011F74D /* Style.swift in Sources */,
+				2EF93A382087325900225844 /* ImageDownloader.swift in Sources */,
 				EAB642AF1E51CF070065AE06 /* SliderViewController.swift in Sources */,
 				EA823BA01DC79B750011F74D /* Color.swift in Sources */,
 				EA7950FD1E5C760E000C1F38 /* ButtonStyle.swift in Sources */,
