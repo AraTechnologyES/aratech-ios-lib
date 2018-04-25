@@ -24,6 +24,14 @@ public struct ButtonStyle: Style {
     
     /// Fuente del titulo, `nil` por defecto
     public var titleFont:          UIFont?
+	
+	/// Si se desea sombra, se aplica la configuración por defecto. Incompatible con imagen de fondo.
+	///  ~~~
+	///  shadowOpacity = 0.5
+	///  shadowRadius = 1.5
+	///  shadowOffset = 1
+	///  ~~~
+	public var shadow: Bool?
     
     /// Insets: Distancia entre los extremos del boton y el titulo, `(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)` por defecto
     public var insets:             UIEdgeInsets?
@@ -35,15 +43,17 @@ public struct ButtonStyle: Style {
             backgroundColor:    UIColor                         = .clear,
             titleColors:        [(UIColor,UIControlState)]      = [(UIColor.black, .normal),(UIColor.white, .selected)],
             titleFont:          UIFont?                         = nil,
-            insets:             UIEdgeInsets                    = UIEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)) {
+            insets:             UIEdgeInsets                    = UIEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0),
+			shadow: 			Bool							  = false) {
         
-        self.roundedBorder      = roundedBorder
-        self.cornerRadius       = cornerRadius
-        self.backgroundImages   = backgroundImages
-        self.backgroundColor    = backgroundColor
-        self.titleColors        = titleColors
-        self.titleFont          = titleFont
-        self.insets             = insets
+        self.roundedBorder = roundedBorder
+        self.cornerRadius = cornerRadius
+        self.backgroundImages = backgroundImages
+        self.backgroundColor = backgroundColor
+        self.titleColors = titleColors
+        self.titleFont = titleFont
+        self.insets = insets
+		self.shadow = shadow
     }
 }
 
