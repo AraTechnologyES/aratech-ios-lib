@@ -15,6 +15,14 @@ public extension CALayer {
 		public let y: CGFloat
 		public let blur: CGFloat
 		public let spread: CGFloat
+		
+		public init(color: UIColor, x: CGFloat = 0, y: CGFloat = 0, blur: CGFloat = 0, spread: CGFloat = 0) {
+			self.color = color
+			self.x = x
+			self.y = y
+			self.blur = blur
+			self.spread = spread
+		}
 	}
 	
 	/// Aplica sombra a la capa en función de los parámetros.

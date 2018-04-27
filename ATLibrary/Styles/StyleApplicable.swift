@@ -40,13 +40,11 @@ public extension StyleApplicable where Self: UIButton, style == ButtonStyle {
             }
         }
 		
-		if style.shadow ?? false {
+		if let configuration = style.shadowConfiguration {
 			self.clipsToBounds = false
 			self.layer.masksToBounds = false
-			self.layer.shadowRadius = 1.5
-			self.layer.shadowOpacity = 0.5
-			self.layer.shadowOffset = CGSize(width: 0, height: 1)
-			self.layer.shadowColor = UIColor.darkGray.cgColor
+			
+			self.layer.shadow(configuration)
 		}
         
         if let images = style.backgroundImages {
