@@ -26,6 +26,8 @@
 		2EBB78CF1EF3ABC900E65F78 /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */; };
 		2EBB78D01EF3ABC900E65F78 /* GenericTableViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */; };
 		2EBB78D11EF3ABC900E65F78 /* SliderViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = EAB642AE1E51CF070065AE06 /* SliderViewController.xib */; };
+		2ED3CDF7209303CF00E0CE87 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED3CDF6209303CF00E0CE87 /* CALayer+Shadow.swift */; };
+		2ED3CDFA209308D200E0CE87 /* CALayer+ShadowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED3CDF9209308D200E0CE87 /* CALayer+ShadowTests.swift */; };
 		2ED835D62090DBFE004C9F21 /* GradientShadowRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED835D52090DBFE004C9F21 /* GradientShadowRoundedView.swift */; };
 		2EF93A202085E28700225844 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A1F2085E28000225844 /* AsyncOperation.swift */; };
 		2EF93A232085E96C00225844 /* FileDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A222085E96500225844 /* FileDownloadManager.swift */; };
@@ -33,7 +35,6 @@
 		2EF93A292086080A00225844 /* DelegatedCallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A282086080A00225844 /* DelegatedCallTests.swift */; };
 		2EF93A2C208608F900225844 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A2B208608F900225844 /* Result.swift */; };
 		2EF93A2F20861AF700225844 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A2E20861AF700225844 /* ResultTests.swift */; };
-		2EF93A3020861EE500225844 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA823B7A1DC798A80011F74D /* Info.plist */; };
 		2EF93A31208620D700225844 /* Instantiable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB4BE3C2060FBA300516A12 /* Instantiable.storyboard */; };
 		2EF93A352086241800225844 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2EF93A342086241800225844 /* README.md */; };
 		2EF93A382087325900225844 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF93A372087325900225844 /* ImageDownloader.swift */; };
@@ -125,6 +126,8 @@
 		2EB67BC9206018A800A278D4 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
 		2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewController.xib; sourceTree = "<group>"; };
+		2ED3CDF6209303CF00E0CE87 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
+		2ED3CDF9209308D200E0CE87 /* CALayer+ShadowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+ShadowTests.swift"; sourceTree = "<group>"; };
 		2ED835D52090DBFE004C9F21 /* GradientShadowRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientShadowRoundedView.swift; sourceTree = "<group>"; };
 		2EF93A1F2085E28000225844 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		2EF93A222085E96500225844 /* FileDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloadManager.swift; sourceTree = "<group>"; };
@@ -375,6 +378,22 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
+		2ED3CDF52093035700E0CE87 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2ED3CDF6209303CF00E0CE87 /* CALayer+Shadow.swift */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		2ED3CDF8209308B700E0CE87 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2ED3CDF9209308D200E0CE87 /* CALayer+ShadowTests.swift */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
 		2EF93A1E2085E22100225844 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,25 +495,26 @@
 		EA823B781DC798A80011F74D /* ATLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				2EF93A2A208608D300225844 /* Result */,
-				2EF93A242085F92200225844 /* Closure */,
-				2EF93A212085E95B00225844 /* Network */,
-				2EF93A1E2085E22100225844 /* Operations */,
-				2E6910DC2073602800EDDB78 /* Dictionary */,
-				2E1497A31FC7000100C635D1 /* Logger */,
-				2E1497AA1FC706FD00C635D1 /* Styles */,
-				2E1497AB1FC7077800C635D1 /* Dispatch */,
+				2E1497B61FC71D9300C635D1 /* Animations */,
 				2E1497AD1FC707E100C635D1 /* Assets */,
-				2E1497AE1FC707F100C635D1 /* Notifications */,
 				2E1497AF1FC7083400C635D1 /* CollectionViews */,
 				2E1497B31FC71C3300C635D1 /* Color */,
-				2E1497B41FC71C5D00C635D1 /* ViewController */,
-				2E1497B61FC71D9300C635D1 /* Animations */,
+				2EF93A242085F92200225844 /* Closure */,
+				2E6910DC2073602800EDDB78 /* Dictionary */,
+				2E1497AB1FC7077800C635D1 /* Dispatch */,
 				2E1497B51FC71CEE00C635D1 /* Documents */,
+				2ED3CDF52093035700E0CE87 /* Layer */,
+				2E1497A31FC7000100C635D1 /* Logger */,
+				2E1497AE1FC707F100C635D1 /* Notifications */,
+				2EF93A212085E95B00225844 /* Network */,
+				2EF93A1E2085E22100225844 /* Operations */,
+				2EF93A2A208608D300225844 /* Result */,
+				2E1497AA1FC706FD00C635D1 /* Styles */,
 				2E1497B71FC71E9300C635D1 /* Slider */,
 				2E1497B21FC71C1100C635D1 /* Segue */,
-				2E1497B81FC71F4800C635D1 /* Views */,
 				2E1497B91FC71FBB00C635D1 /* TextView */,
+				2E1497B41FC71C5D00C635D1 /* ViewController */,
+				2E1497B81FC71F4800C635D1 /* Views */,
 				EA823B791DC798A80011F74D /* ATLibrary.h */,
 				EA823B7A1DC798A80011F74D /* Info.plist */,
 				2EF93A342086241800225844 /* README.md */,
@@ -505,6 +525,7 @@
 		EA823B831DC798A90011F74D /* ATLibraryTests */ = {
 			isa = PBXGroup;
 			children = (
+				2ED3CDF8209308B700E0CE87 /* Layer */,
 				2EF93A392087613000225844 /* Network */,
 				2EF93A2D20861AE100225844 /* Result */,
 				2EF93A27208607F000225844 /* Closure */,
@@ -658,7 +679,6 @@
 			files = (
 				EAB642B01E51CF070065AE06 /* SliderViewController.xib in Resources */,
 				2EF93A352086241800225844 /* README.md in Resources */,
-				2EF93A3020861EE500225844 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +690,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EF93A2F20861AF700225844 /* ResultTests.swift in Sources */,
+				2ED3CDFA209308D200E0CE87 /* CALayer+ShadowTests.swift in Sources */,
 				2E6910F12073667400EDDB78 /* DictionaryTests.swift in Sources */,
 				2E6910F22073667700EDDB78 /* LoggerTests.swift in Sources */,
 				2E6910F32073667A00EDDB78 /* InstantiableTests.swift in Sources */,
@@ -712,6 +733,7 @@
 				EAB642AF1E51CF070065AE06 /* SliderViewController.swift in Sources */,
 				EA823BA01DC79B750011F74D /* Color.swift in Sources */,
 				EA7950FD1E5C760E000C1F38 /* ButtonStyle.swift in Sources */,
+				2ED3CDF7209303CF00E0CE87 /* CALayer+Shadow.swift in Sources */,
 				EA823BAE1DC79CB00011F74D /* SelectableList.swift in Sources */,
 				2EB67BCA206018A900A278D4 /* ShadowRoundedImageView.swift in Sources */,
 				EA823BB21DC79E6E0011F74D /* Sandbox.swift in Sources */,
