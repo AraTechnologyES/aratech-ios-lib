@@ -8,7 +8,16 @@
 
 public extension CALayer {
 	
-	/// Aplica sombra a la capa en función de los parámetros normalmente presentes en los programas de diseño.
+	/// Parámetros normalmente presentes en los programas de diseño.
+	public struct ShadowConfiguration {
+		public let color: UIColor
+		public let x: CGFloat
+		public let y: CGFloat
+		public let blur: CGFloat
+		public let spread: CGFloat
+	}
+	
+	/// Aplica sombra a la capa en función de los parámetros.
 	///
 	/// - Parameters:
 	///   - color: Color de la sombra
@@ -16,7 +25,7 @@ public extension CALayer {
 	///   - y: Offset en el eje y
 	///   - blur: Cantidad de sombra
 	///   - spread: Extensión de la sombra
-	public func shadow(color: UIColor,
+	private func shadow(color: UIColor,
 					   x: CGFloat = 0,
 					   y: CGFloat = 0,
 					   blur: CGFloat = 0,
@@ -32,5 +41,16 @@ public extension CALayer {
 			let rect = self.bounds.insetBy(dx: -spread, dy: -spread)
 			self.shadowPath = UIBezierPath(rect: rect).cgPath
 		}
+	}
+	
+	/// Aplica sombra a la capa en función de la configuración
+	///
+	/// - Parameter configuration: Configuración de la sombra
+	public func shadow(_ configuration: ShadowConfiguration) {
+		self.shadow(color: configuration.color,
+					x: configuration.x,
+					y: configuration.y,
+					blur: configuration.blur,
+					spread: configuration.spread)
 	}
 }
