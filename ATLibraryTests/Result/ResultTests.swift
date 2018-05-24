@@ -16,7 +16,7 @@ class ResultTests: XCTestCase {
 		}
 	}
 	
-	typealias NetworkResult = Result<String, NetworkError>
+	typealias NetworkResult = Result<String>
 	
 	func testAlias() {
 		let goodNetworkResult: NetworkResult = .success("All good")
@@ -29,9 +29,13 @@ class ResultTests: XCTestCase {
 		}
 		
 		if case .error(let error) = badNetworkResult {
-			XCTAssert(error.localizedDescription == NetworkError().localizedDescription)
-		} else {
-			XCTAssert(false)
+			do {
+				throw error
+			} catch is NetworkError {
+				XCTAssert(true)
+			} catch {
+				XCTAssert(false)
+			}
 		}
 	}
 }

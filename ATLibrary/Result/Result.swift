@@ -6,7 +6,7 @@
 //  
 //
 
-public enum Result<Value, ErrorType: Error> {
+public enum Result<Value> {
 	case success(Value)
-	case error(ErrorType)
+	case error(Error)
 }
