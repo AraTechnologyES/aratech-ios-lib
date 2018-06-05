@@ -10,6 +10,8 @@ import XCTest
 @testable import ATLibrary
 class ResultTests: XCTestCase {
 	
+	// MARK: - Enum
+	
 	struct NetworkError: Error {
 		var localizedDescription: String {
 			return String(describing: self)
@@ -18,7 +20,7 @@ class ResultTests: XCTestCase {
 	
 	typealias NetworkResult = Result<String>
 	
-	func testAlias() {
+	func testErrorEnum() {
 		let goodNetworkResult: NetworkResult = .success("All good")
 		let badNetworkResult: NetworkResult = .error(NetworkError())
 		
@@ -37,5 +39,45 @@ class ResultTests: XCTestCase {
 				XCTAssert(false)
 			}
 		}
+	}
+	
+	// MARK: - Typealias
+	
+	func asynchronousCallThatThrows(completion: ThrowableCompletion<String>) {
+		completion({ throw NetworkError() })
+	}
+	
+	func asynchronousCallThatSucceed(completion: ThrowableCompletion<String>) {
+		completion({ return "Success" })
+	}
+	
+	func testThrowableCompletionThatThrows() {
+		let throwableExpectation = expectation(description: "testThrowableCompletionThatThrows")
+		
+		asynchronousCallThatThrows { (result) in
+			do {
+				let _ = try result()
+				XCTAssert(false)
+			} catch {
+				throwableExpectation.fulfill()
+			}
+		}
+		
+		waitForExpectations(timeout: 2.0, handler: nil)
+	}
+	
+	func testThrowableCompletionThatSucceed() {
+		let throwableExpectation = expectation(description: "testThrowableCompletionThatSucceed")
+		
+		asynchronousCallThatSucceed { (result) in
+			do {
+				let _ = try result()
+				throwableExpectation.fulfill()
+			} catch {
+				XCTAssert(false)
+			}
+		}
+		
+		waitForExpectations(timeout: 2.0, handler: nil)
 	}
 }
