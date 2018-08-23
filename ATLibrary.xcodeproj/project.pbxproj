@@ -23,6 +23,7 @@
 		2EB67BCA206018A900A278D4 /* ShadowRoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB67BC7206018A800A278D4 /* ShadowRoundedImageView.swift */; };
 		2EB67BCB206018A900A278D4 /* ShadowRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB67BC8206018A800A278D4 /* ShadowRoundedView.swift */; };
 		2EB67BCC206018A900A278D4 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB67BC9206018A800A278D4 /* DesignableView.swift */; };
+		2EB9D84F212EA71C00222BE2 /* ActivityIndicator+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9D84E212EA71C00222BE2 /* ActivityIndicator+Loading.swift */; };
 		2EBB78CF1EF3ABC900E65F78 /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */; };
 		2EBB78D01EF3ABC900E65F78 /* GenericTableViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */; };
 		2EBB78D11EF3ABC900E65F78 /* SliderViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = EAB642AE1E51CF070065AE06 /* SliderViewController.xib */; };
@@ -123,6 +124,7 @@
 		2EB67BC7206018A800A278D4 /* ShadowRoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowRoundedImageView.swift; sourceTree = "<group>"; };
 		2EB67BC8206018A800A278D4 /* ShadowRoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowRoundedView.swift; sourceTree = "<group>"; };
 		2EB67BC9206018A800A278D4 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		2EB9D84E212EA71C00222BE2 /* ActivityIndicator+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicator+Loading.swift"; sourceTree = "<group>"; };
 		2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
 		2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewController.xib; sourceTree = "<group>"; };
 		2ED3CDF6209303CF00E0CE87 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
@@ -376,6 +378,14 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
+		2EB9D84D212EA6F300222BE2 /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				2EB9D84E212EA71C00222BE2 /* ActivityIndicator+Loading.swift */,
+			);
+			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
 		2ED3CDF52093035700E0CE87 /* Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +502,7 @@
 		EA823B781DC798A80011F74D /* ATLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				2EB9D84D212EA6F300222BE2 /* ActivityIndicator */,
 				2E1497B61FC71D9300C635D1 /* Animations */,
 				2E1497AD1FC707E100C635D1 /* Assets */,
 				2E1497AF1FC7083400C635D1 /* CollectionViews */,
@@ -738,6 +749,7 @@
 				2E9981D21EC4A45E00DBCBE4 /* ExpandAnimationManager.swift in Sources */,
 				EA823BAA1DC79C690011F74D /* UITableView.swift in Sources */,
 				EA63D1EF1DCCADDC000394E2 /* RoundedImageView.swift in Sources */,
+				2EB9D84F212EA71C00222BE2 /* ActivityIndicator+Loading.swift in Sources */,
 				EA823BAC1DC79C8A0011F74D /* UICollectionView.swift in Sources */,
 				2EB4BE362060F5EB00516A12 /* Instantiable.swift in Sources */,
 				EA823B951DC79A220011F74D /* SegueHandlerType.swift in Sources */,
