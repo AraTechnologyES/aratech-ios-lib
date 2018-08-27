@@ -6,13 +6,13 @@
 //  
 //
 
-extension UIImage {
+public extension UIImage {
 	
 	/// Redimensiona la imagen en base a una anchura, respeta la relación de aspecto.
 	///
 	/// - Parameter newWidth: La anchura de la nueva imagen
 	/// - Returns: La imagen redimensionada
-	func resize(width newWidth: CGFloat) -> UIImage {
+	public func resize(width newWidth: CGFloat) -> UIImage {
 		let scale = newWidth / self.size.width
 		let newHeight = self.size.height * scale
 		let newSize = CGSize(width: newWidth, height: newHeight)
