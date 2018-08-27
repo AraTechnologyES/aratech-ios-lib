@@ -11,6 +11,7 @@
 		2E1497A81FC7004E00C635D1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1497A51FC7003800C635D1 /* Logger.swift */; };
 		2E1497A91FC7004E00C635D1 /* Severity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1497A61FC7003900C635D1 /* Severity.swift */; };
 		2E1497B11FC708CB00C635D1 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1497B01FC708CB00C635D1 /* Configurable.swift */; };
+		2E487CE42133FBC600B676CB /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E487CE32133FBC600B676CB /* UIImage+Resize.swift */; };
 		2E6910DE207362CA00EDDB78 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6910DD207362CA00EDDB78 /* Dictionary.swift */; };
 		2E6910EB2073658D00EDDB78 /* ATLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA823B761DC798A80011F74D /* ATLibrary.framework */; };
 		2E6910F12073667400EDDB78 /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6910E02073646C00EDDB78 /* DictionaryTests.swift */; };
@@ -112,6 +113,7 @@
 		2E1497A51FC7003800C635D1 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		2E1497A61FC7003900C635D1 /* Severity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Severity.swift; sourceTree = "<group>"; };
 		2E1497B01FC708CB00C635D1 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		2E487CE32133FBC600B676CB /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		2E6910DD207362CA00EDDB78 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		2E6910E02073646C00EDDB78 /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
 		2E6910E62073658D00EDDB78 /* ATLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -345,6 +347,14 @@
 			path = TextView;
 			sourceTree = "<group>";
 		};
+		2E487CE22133FB9A00B676CB /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2E487CE32133FBC600B676CB /* UIImage+Resize.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		2E6910DC2073602800EDDB78 /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,6 +521,7 @@
 				2E6910DC2073602800EDDB78 /* Dictionary */,
 				2E1497AB1FC7077800C635D1 /* Dispatch */,
 				2E1497B51FC71CEE00C635D1 /* Documents */,
+				2E487CE22133FB9A00B676CB /* Image */,
 				2ED3CDF52093035700E0CE87 /* Layer */,
 				2E1497A31FC7000100C635D1 /* Logger */,
 				2E1497AE1FC707F100C635D1 /* Notifications */,
@@ -762,6 +773,7 @@
 				2E1497A91FC7004E00C635D1 /* Severity.swift in Sources */,
 				EA823B991DC79A880011F74D /* UINavigationController.swift in Sources */,
 				2EF93A262085F93200225844 /* DelegatedCall.swift in Sources */,
+				2E487CE42133FBC600B676CB /* UIImage+Resize.swift in Sources */,
 				EA7950FA1E5C6A90000C1F38 /* StyleApplicable.swift in Sources */,
 				EA823B921DC799B50011F74D /* UIViewController.swift in Sources */,
 				2ED835D62090DBFE004C9F21 /* GradientShadowRoundedView.swift in Sources */,
