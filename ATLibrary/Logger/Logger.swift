@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(*, deprecated, message: "Use os_log instead")
 public struct Logger {
 	
 	/// Instancia compartida configurada para debug
