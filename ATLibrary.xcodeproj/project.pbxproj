@@ -11,6 +11,7 @@
 		2E1497A81FC7004E00C635D1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1497A51FC7003800C635D1 /* Logger.swift */; };
 		2E1497A91FC7004E00C635D1 /* Severity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1497A61FC7003900C635D1 /* Severity.swift */; };
 		2E1497B11FC708CB00C635D1 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1497B01FC708CB00C635D1 /* Configurable.swift */; };
+		2E35A6CD213D7F4800AE24B8 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35A6CC213D7F4800AE24B8 /* Identifiable.swift */; };
 		2E487CE42133FBC600B676CB /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E487CE32133FBC600B676CB /* UIImage+Resize.swift */; };
 		2E6910DE207362CA00EDDB78 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6910DD207362CA00EDDB78 /* Dictionary.swift */; };
 		2E6910EB2073658D00EDDB78 /* ATLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA823B761DC798A80011F74D /* ATLibrary.framework */; };
@@ -113,6 +114,7 @@
 		2E1497A51FC7003800C635D1 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		2E1497A61FC7003900C635D1 /* Severity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Severity.swift; sourceTree = "<group>"; };
 		2E1497B01FC708CB00C635D1 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		2E35A6CC213D7F4800AE24B8 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		2E487CE32133FBC600B676CB /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		2E6910DD207362CA00EDDB78 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		2E6910E02073646C00EDDB78 /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
@@ -347,6 +349,14 @@
 			path = TextView;
 			sourceTree = "<group>";
 		};
+		2E35A6CB213D7F3400AE24B8 /* Identifier */ = {
+			isa = PBXGroup;
+			children = (
+				2E35A6CC213D7F4800AE24B8 /* Identifiable.swift */,
+			);
+			path = Identifier;
+			sourceTree = "<group>";
+		};
 		2E487CE22133FB9A00B676CB /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +531,7 @@
 				2E6910DC2073602800EDDB78 /* Dictionary */,
 				2E1497AB1FC7077800C635D1 /* Dispatch */,
 				2E1497B51FC71CEE00C635D1 /* Documents */,
+				2E35A6CB213D7F3400AE24B8 /* Identifier */,
 				2E487CE22133FB9A00B676CB /* Image */,
 				2ED3CDF52093035700E0CE87 /* Layer */,
 				2E1497A31FC7000100C635D1 /* Logger */,
@@ -760,6 +771,7 @@
 				2E9981D21EC4A45E00DBCBE4 /* ExpandAnimationManager.swift in Sources */,
 				EA823BAA1DC79C690011F74D /* UITableView.swift in Sources */,
 				EA63D1EF1DCCADDC000394E2 /* RoundedImageView.swift in Sources */,
+				2E35A6CD213D7F4800AE24B8 /* Identifiable.swift in Sources */,
 				2EB9D84F212EA71C00222BE2 /* ActivityIndicator+Loading.swift in Sources */,
 				EA823BAC1DC79C8A0011F74D /* UICollectionView.swift in Sources */,
 				2EB4BE362060F5EB00516A12 /* Instantiable.swift in Sources */,
