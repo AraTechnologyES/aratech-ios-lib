@@ -104,7 +104,7 @@ open class AsyncImageFetcher {
      */
     private func fetchData(for identifier: UUID) {
         // If a request has already been made for the object, do nothing more.
-        guard operation(for: identifier) == nil else { return }
+        guard operation(for: identifier) == nil, self.cache.object(forKey: identifier as NSURL) == nil else { return }
         
         if let data = fetchedData(for: identifier) {
             // The object has already been cached; call the completion handler with that object.
