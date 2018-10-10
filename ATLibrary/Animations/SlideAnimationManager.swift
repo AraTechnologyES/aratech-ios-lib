@@ -201,7 +201,7 @@ open class SlideAnimationManager: UIPercentDrivenInteractiveTransition, UIViewCo
             darkenView.accessibilityIdentifier = "darkenView"
             darkenView.alpha = 0
             snapshot.addSubview(darkenView)
-            snapshot.bringSubview(toFront: darkenView)
+			snapshot.bringSubviewToFront(darkenView)
             containerView.insertSubview(snapshot, belowSubview: toViewController.view)
             fromViewController.view.isHidden = true
             

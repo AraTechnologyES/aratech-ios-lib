@@ -21,7 +21,7 @@ open class SliderViewController: UIViewController {
     }
     
     /// Modo de las imágenes
-    public var contentMode: UIViewContentMode = .scaleToFill
+	public var contentMode: UIView.ContentMode = .scaleToFill
 	
 	public enum Position {
 		case top

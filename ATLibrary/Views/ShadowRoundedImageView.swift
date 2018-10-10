@@ -63,7 +63,7 @@ class ShadowRoundedImageView: UIView {
 		
 		for subview in subviews {
 			if subview != shadowView && subview != imageView {
-				self.bringSubview(toFront: subview)
+				self.bringSubviewToFront(subview)
 			}
 		}
 	}

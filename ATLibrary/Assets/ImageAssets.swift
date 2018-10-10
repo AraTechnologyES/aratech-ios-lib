@@ -12,7 +12,7 @@ public protocol ImageAssetProvider {
 
 extension ImageAssetProvider where ImageAssetName.RawValue == String {
     
-    public static func image(forAsset asset: ImageAssetName, selected: Bool = false, renderingMode: UIImageRenderingMode? = nil) -> UIImage {
+	public static func image(forAsset asset: ImageAssetName, selected: Bool = false, renderingMode: UIImage.RenderingMode? = nil) -> UIImage {
         let image = UIImage(named: selected ? asset.rawValue + "_selected" : asset.rawValue)!
         if renderingMode != nil { return image.withRenderingMode(renderingMode!) }
         return image

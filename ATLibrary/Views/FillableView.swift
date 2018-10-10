@@ -180,7 +180,7 @@ import UIKit
             anim.duration = self.animationTime
             
             // custom timing function to make it look smooth
-            anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+			anim.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
             
             // add animation
             maskLayer.add(anim, forKey: nil)
@@ -191,7 +191,7 @@ import UIKit
         maskLayer.path = myPath
         CATransaction.commit()
         
-        maskLayer.fillRule = kCAFillRuleEvenOdd
+		maskLayer.fillRule = .evenOdd
         
         return maskLayer
     }

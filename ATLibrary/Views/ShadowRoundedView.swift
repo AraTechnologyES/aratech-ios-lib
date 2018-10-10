@@ -131,7 +131,7 @@ class ShadowRoundedView: UIView {
 		
 		for subview in subviews {
 			if subview != shadowView && subview != contentView {
-				self.bringSubview(toFront: subview)
+				self.bringSubviewToFront(subview)
 			}
 		}
 	}

@@ -13,7 +13,7 @@ public extension UIActivityIndicatorView {
 	/// - Parameter view: Vista en la que centrar el indicador, éste NO se añade a la vista.
 	/// - Returns: El indicador de carga
 	public class func loadingIndicator(in view: UIView) -> UIActivityIndicatorView {
-		let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+		let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
 		activityIndicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
 		activityIndicator.center = CGPoint(x: view.bounds.size.width / 2,
 										   y: view.bounds.size.height / 2)

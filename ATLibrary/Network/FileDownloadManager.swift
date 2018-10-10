@@ -5,6 +5,7 @@
 //  
 //
 
+import os
 import Foundation
 
 public protocol BackgroundSessionEnabledApplicationDelegateProtocol {
@@ -103,8 +104,9 @@ open class FileDownloadManager: NSObject {
 		type(of: self).pendingDownloads[taskId] = fileDownloadModel
 		type(of: self).progressDelegates[taskId] = progressDelegate
 		
-		let operation = BlockOperation(block: completion ?? {
-			Logger.shared.debug("Operación (dummy) de finalización de la tarea \(taskId) de descarga del fichero \(remoteUrl.absoluteString)")
+		let operation = BlockOperation(block: completion ?? { [weak self] in
+			self?.log(level: .info, message: "Operación (dummy) de finalización de la tarea %d de descarga del fichero %@",
+					  taskId, remoteUrl.absoluteString)
 		})
 		type(of: self).completionOperations[taskId] = operation
 		
@@ -146,7 +148,8 @@ open class FileDownloadManager: NSObject {
 			// Guardar
 			try encodedDownloads.write(to: url)
 		} catch let error {
-			Logger.shared.error("Ocurrión un error al codificar las descargas activas: \(error.localizedDescription)")
+			self.log(level: .error, message: "Operación (dummy) de finalización de la tarea %d de descarga del fichero %@",
+					 error.localizedDescription)
 		}
 	}
 	
@@ -160,7 +163,7 @@ open class FileDownloadManager: NSObject {
 			downloads.forEach({ type(of: self).pendingDownloads[$0.taskId] = $0 })
 			
 		} catch let error {
-			Logger.shared.error("Ocurrió un error al decodificar las descargas activas: \(error.localizedDescription)")
+			log(level: .error, message: "Ocurrió un error al decodificar las descargas activas: %@", error.localizedDescription)
 		}
 	}
 	
@@ -183,7 +186,17 @@ open class FileDownloadManager: NSObject {
 		// Mover el nuevo archivo
 		try fileManager.moveItem(atPath: file.path, toPath: url.path)
 		
-		Logger.shared.debug("Fichero \(file.lastPathComponent) copiado en \(url.deletingLastPathComponent())\n")
+		log(level: .info, message: "Fichero %@ copiado en %@\n",
+			file.lastPathComponent, url.deletingLastPathComponent().absoluteString)
+	}
+	
+	private func log(level: OSLogType, message: StaticString, _ args: CVarArg...) {
+		if #available(iOS 12.0, *) {
+			os_log(level, log: .atLibrary, message, args)
+		} else {
+			// Fallback on earlier versions
+			os_log(message, args)
+		}
 	}
 }
 
@@ -193,7 +206,8 @@ extension FileDownloadManager: URLSessionDownloadDelegate {
 	
 	public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
 		guard let remoteUrl = downloadTask.originalRequest?.url else { return }
-		Logger.shared.debug("Archivo \(remoteUrl.description) descargado en: \(location.path)")
+		log(level: .debug, message: "Archivo %@ descargado en: %@",
+			remoteUrl.description, location.path)
 		
 		// Recoger el modelo, pues el delegado es compartido para todas las descargas
 		guard let downloadFileModel = type(of: self).pendingDownloads[downloadTask.taskIdentifier] else { return }
@@ -204,7 +218,7 @@ extension FileDownloadManager: URLSessionDownloadDelegate {
 			
 			try self.save(file: location, into: fileURL)
 			
-			Logger.shared.debug("Emitida notificación para \(fileURL.path)")
+			log(level: .debug, message: "Emitida notificación para %@", fileURL.path)
 			NotificationCenter.default.post(name: NSNotification.Name(rawValue: fileURL.path), object: fileURL)
 			
 			let taskId = downloadTask.taskIdentifier
@@ -212,11 +226,12 @@ extension FileDownloadManager: URLSessionDownloadDelegate {
 			type(of: self).progressDelegates.removeValue(forKey: taskId)
 			
 			if let completionOperation = type(of: self).completionOperations.removeValue(forKey: taskId) {
-				Logger.shared.debug("Añadiendo operación de finalización para tarea: \(taskId)")
+				log(level: .debug, message: "Añadiendo operación de finalización para tarea: %d", taskId)
 				type(of: self).completionOperationQueue.addOperation(completionOperation)
 			}
 		} catch {
-			Logger.shared.error("Ocurrió un error al guardar el archivo \(remoteUrl.path) en \(downloadFileModel.filePath): \(error.localizedDescription)\n")
+			log(level: .error, message: "Ocurrió un error al guardar el archivo %@ en %@: %@\n",
+				remoteUrl.path, downloadFileModel.filePath, error.localizedDescription)
 		}
 	}
 	
@@ -224,7 +239,8 @@ extension FileDownloadManager: URLSessionDownloadDelegate {
 		guard let error = error,
 			let remoteUrl = task.originalRequest?.url else { return }
 		
-		Logger.shared.error("Ocurrió un error descargando el archivo \(remoteUrl.path): \(error.localizedDescription)")
+		log(level: .error, message: "Ocurrió un error descargando el archivo %@: %@",
+			remoteUrl.path, error.localizedDescription)
 	}
 	
 	public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {

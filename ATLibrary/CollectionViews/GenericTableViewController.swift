@@ -20,7 +20,7 @@ open class GenericTableViewController<T, Cell: UITableViewCell>: UITableViewCont
         super.viewDidLoad()
 		
 		tableView.estimatedRowHeight = tableView.rowHeight
-		tableView.rowHeight = UITableViewAutomaticDimension
+		tableView.rowHeight = UITableView.automaticDimension
     }
 	
 	public init() { super.init(nibName: "GenericTableViewController", bundle: nil) }
