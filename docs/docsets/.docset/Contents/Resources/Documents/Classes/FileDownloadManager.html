@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FileDownloadManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/FileDownloadManager" class="dashAnchor"></a>
+    <a title="FileDownloadManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (44% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        FileDownloadManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ExpandAnimationManager.html">ExpandAnimationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileDownloadManager.html">FileDownloadManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FillableView.html">FillableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GenericTableViewController.html">GenericTableViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RoundedImageView.html">RoundedImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SlideAnimationManager.html">SlideAnimationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SlideAnimationManager/AnimationMode.html">– AnimationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SliderViewController.html">SliderViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SliderViewController/Position.html">– Position</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StyleableButton.html">StyleableButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StyleableTextField.html">StyleableTextField</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AppMode.html">AppMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/InstantiationError.html">InstantiationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SelectionState.html">SelectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Severity.html">Severity</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CALayer.html">CALayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CALayer/ShadowConfiguration.html">– ShadowConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UINavigationController.html">UINavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextView.html">UITextView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9ATLibrary7executeySo13DispatchQueueC2in_0C00C4TimeVSg5delayyyctF">execute(in:delay:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BackgroundSessionEnabledApplicationDelegateProtocol.html">BackgroundSessionEnabledApplicationDelegateProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Configurable.html">Configurable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ImageAssetProvider.html">ImageAssetProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Instantiable.html">Instantiable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NibLoadableView.html">NibLoadableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NotificationNameProvider.html">NotificationNameProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ProgressUpdateDelegate.html">ProgressUpdateDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Registrable.html">Registrable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReusableView.html">ReusableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SegueHandlerType.html">SegueHandlerType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Selectable.html">Selectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SelectableList.html">SelectableList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:9ATLibrary5StyleP">Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/StyleApplicable.html">StyleApplicable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ButtonStyle.html">ButtonStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Color/Gray.html">– Gray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DelegatedCall.html">DelegatedCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Logger.html">Logger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Sandbox.html">Sandbox</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Sandbox/ApplicationSupport.html">– ApplicationSupport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TextFieldStyle.html">TextFieldStyle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9ATLibrary19ThrowableCompletiona">ThrowableCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9ATLibrary15ThrowableResulta">ThrowableResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FileDownloadManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">FileDownloadManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Downloads"></a>
+                <a name="//apple_ref/swift/Section/Downloads" class="dashAnchor"></a>
+                <a href="#/Downloads">
+                  <h3 class="section-name">Downloads</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ATLibrary19FileDownloadManagerC8downloadSo9OperationC10Foundation3URLV4file_AI4intoAA22ProgressUpdateDelegate_pSg08progressM0yycSg10completiontF"></a>
+                    <a name="//apple_ref/swift/Method/download(file:into:progressDelegate:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ATLibrary19FileDownloadManagerC8downloadSo9OperationC10Foundation3URLV4file_AI4intoAA22ProgressUpdateDelegate_pSg08progressM0yycSg10completiontF">download(file:into:progressDelegate:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Descarga el fichero especificado y lo guarda en la ruta local proporcionada.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="n">file</span> <span class="nv">remoteUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+					 <span class="n">into</span> <span class="nv">localUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+					 <span class="nv">progressDelegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ProgressUpdateDelegate.html">ProgressUpdateDelegate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+					 <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Operation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteUrl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>url del fichero a descargar</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>localUrl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>url en la que guardar el fichero (local)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progressDelegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>delegado para el progreso de la descarga, <code>nil</code> por defecto</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bloque a ejecutar al terminar la descarga, <code>nil</code> por defecto</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Operación Dummy por si se desea añadir la descarga como dependencia a otra operación</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Background"></a>
+                <a name="//apple_ref/swift/Section/Background" class="dashAnchor"></a>
+                <a href="#/Background">
+                  <h3 class="section-name">Background</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ATLibrary@objc(cs)FileDownloadManager(im)prepareForBackgroundActivity"></a>
+                    <a name="//apple_ref/swift/Method/prepareForBackgroundActivity()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ATLibrary@objc(cs)FileDownloadManager(im)prepareForBackgroundActivity">prepareForBackgroundActivity()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prepara al gestor para seguir con las descargas mientras la app está en segundo plano</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepareForBackgroundActivity</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ATLibrary@objc(cs)FileDownloadManager(im)awakeFromBackground"></a>
+                    <a name="//apple_ref/swift/Method/awakeFromBackground()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ATLibrary@objc(cs)FileDownloadManager(im)awakeFromBackground">awakeFromBackground()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prepara al gestor para funcionar despues de que la app haya sido devuelta a primer plano</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">awakeFromBackground</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/URLSessionDownloadDelegate"></a>
+                <a name="//apple_ref/swift/Section/URLSessionDownloadDelegate" class="dashAnchor"></a>
+                <a href="#/URLSessionDownloadDelegate">
+                  <h3 class="section-name">URLSessionDownloadDelegate</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@ATLibrary@objc(cs)FileDownloadManager(im)URLSession:downloadTask:didFinishDownloadingToURL:"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:downloadTask:didFinishDownloadingTo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@ATLibrary@objc(cs)FileDownloadManager(im)URLSession:downloadTask:didFinishDownloadingToURL:">urlSession(_:downloadTask:didFinishDownloadingTo:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span> <span class="nv">downloadTask</span><span class="p">:</span> <span class="kt">URLSessionDownloadTask</span><span class="p">,</span> <span class="n">didFinishDownloadingTo</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@ATLibrary@objc(cs)FileDownloadManager(im)URLSession:task:didCompleteWithError:"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:task:didCompleteWithError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@ATLibrary@objc(cs)FileDownloadManager(im)URLSession:task:didCompleteWithError:">urlSession(_:task:didCompleteWithError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span> <span class="nv">task</span><span class="p">:</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="n">didCompleteWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@ATLibrary@objc(cs)FileDownloadManager(im)URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@ATLibrary@objc(cs)FileDownloadManager(im)URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:">urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span> <span class="nv">downloadTask</span><span class="p">:</span> <span class="kt">URLSessionDownloadTask</span><span class="p">,</span> <span class="n">didWriteData</span> <span class="nv">bytesWritten</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">totalBytesWritten</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">totalBytesExpectedToWrite</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@ATLibrary@objc(cs)FileDownloadManager(im)URLSessionDidFinishEventsForBackgroundURLSession:"></a>
+                    <a name="//apple_ref/swift/Method/urlSessionDidFinishEvents(forBackgroundURLSession:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@ATLibrary@objc(cs)FileDownloadManager(im)URLSessionDidFinishEventsForBackgroundURLSession:">urlSessionDidFinishEvents(forBackgroundURLSession:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">urlSessionDidFinishEvents</span><span class="p">(</span><span class="n">forBackgroundURLSession</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-23)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

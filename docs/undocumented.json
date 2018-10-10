@@ -1,0 +1,922 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/ExpandAnimationManager.swift",
+      "line": 8,
+      "symbol": "ExpandAnimationManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/ExpandAnimationManager.swift",
+      "line": 12,
+      "symbol": "ExpandAnimationManager.presenting",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/ExpandAnimationManager.swift",
+      "line": 13,
+      "symbol": "ExpandAnimationManager.originFrame",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/ExpandAnimationManager.swift",
+      "line": 16,
+      "symbol": "ExpandAnimationManager.transitionDuration(using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/ExpandAnimationManager.swift",
+      "line": 21,
+      "symbol": "ExpandAnimationManager.animateTransition(using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/SlideAnimationManager.swift",
+      "line": 13,
+      "symbol": "SlideAnimationManager.AnimationMode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/SlideAnimationManager.swift",
+      "line": 14,
+      "symbol": "SlideAnimationManager.AnimationMode.present",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/SlideAnimationManager.swift",
+      "line": 15,
+      "symbol": "SlideAnimationManager.AnimationMode.dismiss",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/SlideAnimationManager.swift",
+      "line": 122,
+      "symbol": "SlideAnimationManager.transitionDuration(using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/SlideAnimationManager.swift",
+      "line": 126,
+      "symbol": "SlideAnimationManager.animateTransition(using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/SlideAnimationManager.swift",
+      "line": 259,
+      "symbol": "SlideAnimationManager.animationController(forPresented:presenting:source:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/SlideAnimationManager.swift",
+      "line": 264,
+      "symbol": "SlideAnimationManager.animationController(forDismissed:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/SlideAnimationManager.swift",
+      "line": 269,
+      "symbol": "SlideAnimationManager.interactionControllerForPresentation(using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Animations/SlideAnimationManager.swift",
+      "line": 273,
+      "symbol": "SlideAnimationManager.interactionControllerForDismissal(using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Assets/ImageAssets.swift",
+      "line": null,
+      "symbol": "ImageAssetProvider",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Assets/ImageAssets.swift",
+      "line": 9,
+      "symbol": "ImageAssetProvider",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Assets/ImageAssets.swift",
+      "line": 10,
+      "symbol": "ImageAssetProvider.ImageAssetName",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Assets/ImageAssets.swift",
+      "line": 15,
+      "symbol": "ImageAssetProvider.image(forAsset:selected:renderingMode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Assets/ImageAssets.swift",
+      "line": 21,
+      "symbol": "ImageAssetProvider.imageView(forAsset:selected:tintColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Closure/DelegatedCall.swift",
+      "line": 44,
+      "symbol": "DelegatedCall.CallbackBlock",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Closure/DelegatedCall.swift",
+      "line": 45,
+      "symbol": "DelegatedCall.callback",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Closure/DelegatedCall.swift",
+      "line": 47,
+      "symbol": "DelegatedCall.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/Configurable.swift",
+      "line": 8,
+      "symbol": "Configurable.Model",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/GenericTableViewController.swift",
+      "line": 11,
+      "symbol": "GenericTableViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/GenericTableViewController.swift",
+      "line": 13,
+      "symbol": "GenericTableViewController.viewModel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/GenericTableViewController.swift",
+      "line": 19,
+      "symbol": "GenericTableViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/GenericTableViewController.swift",
+      "line": 26,
+      "symbol": "GenericTableViewController.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/GenericTableViewController.swift",
+      "line": 27,
+      "symbol": "GenericTableViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/GenericTableViewController.swift",
+      "line": 29,
+      "symbol": "GenericTableViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/GenericTableViewController.swift",
+      "line": 33,
+      "symbol": "GenericTableViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/NibLoadableView.swift",
+      "line": null,
+      "symbol": "NibLoadableView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/NibLoadableView.swift",
+      "line": 9,
+      "symbol": "NibLoadableView",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/NibLoadableView.swift",
+      "line": 13,
+      "symbol": "NibLoadableView.nibName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/ReusableView.swift",
+      "line": null,
+      "symbol": "ReusableView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/ReusableView.swift",
+      "line": 9,
+      "symbol": "ReusableView",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/ReusableView.swift",
+      "line": 13,
+      "symbol": "ReusableView.reuseIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 14,
+      "symbol": "SelectionState.selected",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 15,
+      "symbol": "SelectionState.partial",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 16,
+      "symbol": "SelectionState.notSelected",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 39,
+      "symbol": "Selectable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 40,
+      "symbol": "Selectable.state",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 48,
+      "symbol": "SelectableList.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 56,
+      "symbol": "SelectableList.hasChilds",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 62,
+      "symbol": "SelectableList.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 68,
+      "symbol": "SelectableList.subscript(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 79,
+      "symbol": "SelectableList.getState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 95,
+      "symbol": "SelectableList.set(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/SelectableList.swift",
+      "line": 111,
+      "symbol": "SelectableList.set(child:state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/UICollectionReusableView.swift",
+      "line": 12,
+      "symbol": "Registrable.register(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/UICollectionView.swift",
+      "line": 11,
+      "symbol": "UICollectionView.register(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/UICollectionView.swift",
+      "line": 16,
+      "symbol": "UICollectionView.dequeueReusableCell(forIndexPath:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/UICollectionView.swift",
+      "line": 23,
+      "symbol": "UICollectionView.dequeueReusableView(ofKind:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/UITableView.swift",
+      "line": 11,
+      "symbol": "UITableView.register(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/UITableView.swift",
+      "line": 16,
+      "symbol": "UITableView.dequeueReusableCell(forIndexPath:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/CollectionViews/UITableViewCell.swift",
+      "line": 12,
+      "symbol": "Registrable.register(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Color/Color.swift",
+      "line": 9,
+      "symbol": "Color",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Color/Color.swift",
+      "line": 11,
+      "symbol": "Color.Gray",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Color/Color.swift",
+      "line": 19,
+      "symbol": "Color.random()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Dictionary/Dictionary.swift",
+      "line": 9,
+      "symbol": "Dictionary.value(forKey:defaultValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Documents/Sandbox.swift",
+      "line": 9,
+      "symbol": "Sandbox",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Documents/Sandbox.swift",
+      "line": 15,
+      "symbol": "Sandbox.Library",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Layer/CALayer+Shadow.swift",
+      "line": 13,
+      "symbol": "CALayer.ShadowConfiguration.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Layer/CALayer+Shadow.swift",
+      "line": 14,
+      "symbol": "CALayer.ShadowConfiguration.x",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Layer/CALayer+Shadow.swift",
+      "line": 15,
+      "symbol": "CALayer.ShadowConfiguration.y",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Layer/CALayer+Shadow.swift",
+      "line": 16,
+      "symbol": "CALayer.ShadowConfiguration.blur",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Layer/CALayer+Shadow.swift",
+      "line": 17,
+      "symbol": "CALayer.ShadowConfiguration.spread",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Layer/CALayer+Shadow.swift",
+      "line": 19,
+      "symbol": "CALayer.ShadowConfiguration.init(color:x:y:blur:spread:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Logger/AppMode.swift",
+      "line": 16,
+      "symbol": "AppMode.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Logger/AppMode.swift",
+      "line": 17,
+      "symbol": "AppMode.release",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Logger/Logger.swift",
+      "line": 11,
+      "symbol": "Logger",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Network/FileDownloadManager.swift",
+      "line": null,
+      "symbol": "FileDownloadManager",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Network/FileDownloadManager.swift",
+      "line": 10,
+      "symbol": "BackgroundSessionEnabledApplicationDelegateProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Network/FileDownloadManager.swift",
+      "line": 11,
+      "symbol": "BackgroundSessionEnabledApplicationDelegateProtocol.backgroundSessionCompletionHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Network/FileDownloadManager.swift",
+      "line": 14,
+      "symbol": "ProgressUpdateDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Network/FileDownloadManager.swift",
+      "line": 15,
+      "symbol": "ProgressUpdateDelegate.updateDisplay(progress:totalSize:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Network/FileDownloadManager.swift",
+      "line": 32,
+      "symbol": "FileDownloadManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Network/FileDownloadManager.swift",
+      "line": 194,
+      "symbol": "FileDownloadManager.urlSession(_:downloadTask:didFinishDownloadingTo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Network/FileDownloadManager.swift",
+      "line": 223,
+      "symbol": "FileDownloadManager.urlSession(_:task:didCompleteWithError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Network/FileDownloadManager.swift",
+      "line": 230,
+      "symbol": "FileDownloadManager.urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Network/FileDownloadManager.swift",
+      "line": 242,
+      "symbol": "FileDownloadManager.urlSessionDidFinishEvents(forBackgroundURLSession:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Notifications/Notificable.swift",
+      "line": null,
+      "symbol": "NotificationNameProvider",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Notifications/Notificable.swift",
+      "line": 9,
+      "symbol": "NotificationNameProvider",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Notifications/Notificable.swift",
+      "line": 10,
+      "symbol": "NotificationNameProvider.NotificationName",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Notifications/Notificable.swift",
+      "line": 12,
+      "symbol": "NotificationNameProvider.add(observer:selector:forNotification:object:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Notifications/Notificable.swift",
+      "line": 13,
+      "symbol": "NotificationNameProvider.remove(observer:forNotification:object:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Notifications/Notificable.swift",
+      "line": 14,
+      "symbol": "NotificationNameProvider.post(notification:object:userInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Notifications/Notificable.swift",
+      "line": 19,
+      "symbol": "NotificationNameProvider.add(observer:selector:forNotification:object:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Notifications/Notificable.swift",
+      "line": 23,
+      "symbol": "NotificationNameProvider.remove(observer:forNotification:object:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Notifications/Notificable.swift",
+      "line": 27,
+      "symbol": "NotificationNameProvider.post(notification:object:userInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Result/Result.swift",
+      "line": 9,
+      "symbol": "Result",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Result/Result.swift",
+      "line": 10,
+      "symbol": "Result.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Result/Result.swift",
+      "line": 11,
+      "symbol": "Result.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Result/Result.swift",
+      "line": 17,
+      "symbol": "ThrowableResult",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Result/Result.swift",
+      "line": 18,
+      "symbol": "ThrowableCompletion",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Segue/SegueHandlerType.swift",
+      "line": null,
+      "symbol": "SegueHandlerType",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Segue/SegueHandlerType.swift",
+      "line": 9,
+      "symbol": "SegueHandlerType",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Segue/SegueHandlerType.swift",
+      "line": 16,
+      "symbol": "SegueHandlerType.performSegue(withIdentifier:sender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Segue/SegueHandlerType.swift",
+      "line": 20,
+      "symbol": "SegueHandlerType.segueIdentifier(forSegue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Segue/SegueHandlerType.swift",
+      "line": 29,
+      "symbol": "SegueHandlerType.segueIdentifier(forIdentifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Slider/SliderViewController.swift",
+      "line": 26,
+      "symbol": "SliderViewController.Position",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Slider/SliderViewController.swift",
+      "line": 27,
+      "symbol": "SliderViewController.Position.top",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Slider/SliderViewController.swift",
+      "line": 28,
+      "symbol": "SliderViewController.Position.bottom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Slider/SliderViewController.swift",
+      "line": 29,
+      "symbol": "SliderViewController.Position.hidden",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Slider/SliderViewController.swift",
+      "line": 119,
+      "symbol": "SliderViewController.scroll(toPage:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Slider/SliderViewController.swift",
+      "line": 149,
+      "symbol": "SliderViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Slider/SliderViewController.swift",
+      "line": 155,
+      "symbol": "SliderViewController.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Slider/SliderViewController.swift",
+      "line": 168,
+      "symbol": "SliderViewController.scrollViewDidEndDecelerating(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/ButtonStyle.swift",
+      "line": 34,
+      "symbol": "ButtonStyle.init(roundedBorder:cornerRadius:backgroundImages:backgroundColor:titleColors:titleFont:insets:shadowConfiguration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/StyleApplicable.swift",
+      "line": null,
+      "symbol": "StyleApplicable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/StyleApplicable.swift",
+      "line": null,
+      "symbol": "StyleApplicable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/StyleApplicable.swift",
+      "line": 8,
+      "symbol": "Style",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/StyleApplicable.swift",
+      "line": 10,
+      "symbol": "StyleApplicable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/StyleApplicable.swift",
+      "line": 11,
+      "symbol": "StyleApplicable.style",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/StyleableButton.swift",
+      "line": 7,
+      "symbol": "StyleableButton",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/StyleableButton.swift",
+      "line": 8,
+      "symbol": "StyleableButton.style",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/StyleableButton.swift",
+      "line": 18,
+      "symbol": "StyleableButton.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/StyleableTextField.swift",
+      "line": 7,
+      "symbol": "StyleableTextField",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/StyleableTextField.swift",
+      "line": 8,
+      "symbol": "StyleableTextField.style",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/StyleableTextField.swift",
+      "line": 18,
+      "symbol": "StyleableTextField.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Styles/TextFieldStyle.swift",
+      "line": 28,
+      "symbol": "TextFieldStyle.init(bottomLine:bottomLineColor:bottomLineHeight:textColor:textFont:placeHolderTextColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/ViewController/Instantiable.swift",
+      "line": null,
+      "symbol": "Instantiable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/ViewController/Instantiable.swift",
+      "line": null,
+      "symbol": "Instantiable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/ViewController/Instantiable.swift",
+      "line": 25,
+      "symbol": "Instantiable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/ViewController/UINavigationController.swift",
+      "line": 11,
+      "symbol": "UINavigationController.presentTransparentNavigationBar()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/ViewController/UINavigationController.swift",
+      "line": 18,
+      "symbol": "UINavigationController.hideTransparentNavigationBar()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/ViewController/UIViewController.swift",
+      "line": 11,
+      "symbol": "UIViewController.content",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Views/FillableView.swift",
+      "line": 76,
+      "symbol": "FillableView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Views/FillableView.swift",
+      "line": 81,
+      "symbol": "FillableView.prepareForInterfaceBuilder()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Views/FillableView.swift",
+      "line": 85,
+      "symbol": "FillableView.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Views/RoundedImageView.swift",
+      "line": 10,
+      "symbol": "RoundedImageView.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aratech/Developer/ATLibrary/ATLibrary/Views/RoundedImageView.swift",
+      "line": 28,
+      "symbol": "RoundedImageView.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/aratech/Developer/ATLibrary"
+}
