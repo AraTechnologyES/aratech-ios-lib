@@ -12,6 +12,7 @@
 		2E1497A91FC7004E00C635D1 /* Severity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1497A61FC7003900C635D1 /* Severity.swift */; };
 		2E1497B11FC708CB00C635D1 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1497B01FC708CB00C635D1 /* Configurable.swift */; };
 		2E35A6CD213D7F4800AE24B8 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35A6CC213D7F4800AE24B8 /* Identifiable.swift */; };
+		2E3ADFB121A412EF00B3DA57 /* LoadResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ADFB021A412EF00B3DA57 /* LoadResourcesViewController.swift */; };
 		2E487CE42133FBC600B676CB /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E487CE32133FBC600B676CB /* UIImage+Resize.swift */; };
 		2E6910DE207362CA00EDDB78 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6910DD207362CA00EDDB78 /* Dictionary.swift */; };
 		2E6910EB2073658D00EDDB78 /* ATLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA823B761DC798A80011F74D /* ATLibrary.framework */; };
@@ -114,6 +115,7 @@
 		2E1497A61FC7003900C635D1 /* Severity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Severity.swift; sourceTree = "<group>"; };
 		2E1497B01FC708CB00C635D1 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		2E35A6CC213D7F4800AE24B8 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		2E3ADFB021A412EF00B3DA57 /* LoadResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcesViewController.swift; sourceTree = "<group>"; };
 		2E487CE32133FBC600B676CB /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		2E6910DD207362CA00EDDB78 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		2E6910E02073646C00EDDB78 /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				EA823B911DC799B50011F74D /* UIViewController.swift */,
 				EA823B981DC79A880011F74D /* UINavigationController.swift */,
 				2EB4BE352060F5EB00516A12 /* Instantiable.swift */,
+				2E3ADFB021A412EF00B3DA57 /* LoadResourcesViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -773,6 +776,7 @@
 				EA823BA81DC79C480011F74D /* UICollectionReusableView.swift in Sources */,
 				EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */,
 				EA3684871E5D7BA1003CEFC5 /* StyleableTextField.swift in Sources */,
+				2E3ADFB121A412EF00B3DA57 /* LoadResourcesViewController.swift in Sources */,
 				2E9085681F6278F70051BEA3 /* Dispatch.swift in Sources */,
 				EA823BA61DC79C0B0011F74D /* NibLoadableView.swift in Sources */,
 				2E1497A91FC7004E00C635D1 /* Severity.swift in Sources */,
