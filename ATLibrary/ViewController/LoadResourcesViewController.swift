@@ -80,4 +80,14 @@ open class LoadResourcesViewController: UIViewController {
 	///
 	/// La implementación por defecto no hace nada
 	open func resourcesLoaded() { }
+	
+	// MARK: - Helpers
+	
+	/// Busca el valor asociado a una clave en el fichero `Info.plist`
+	///
+	/// - Parameter key: clave
+	/// - Returns: El valor asociado a la clave en el fichero `Info.plist`
+	public func infoForKey<T>(_ key: String) -> T? {
+		return (Bundle.main.infoDictionary?[key] as? T)
+	}
 }
