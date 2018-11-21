@@ -7,26 +7,15 @@
 
 import Foundation
 
-/// Clase base para operaciones concurrentes. Solo es necesario llamar a la función `finish` al terminar el trabajo en `start`
-class AsyncOperation: Operation {
+/// Clase base para operaciones concurrentes/asíncronas.
+///
+/// Sobreescribir método `main` para personalizar comportamiento. Asignar .finished a `state` para dar por finalizada la operación:
+///
+///     self.status = .finished
+///
+open class AsyncOperation: Operation {
 	
-	public struct Queues {
-		public static let userInitiated: OperationQueue = {
-			let queue = OperationQueue()
-			queue.name = "AsyncOperation.Queues.userIniciated"
-			queue.qualityOfService = .userInitiated
-			return queue
-		}()
-		
-		public static let utility: OperationQueue = {
-			let queue = OperationQueue()
-			queue.name = "AsyncOperation.Queues.utility"
-			queue.qualityOfService = .utility
-			return queue
-		}()
-	}
-	
-	enum State: String {
+	public enum State: String {
 		case ready = "Ready"
 		case executing = "Executing"
 		case finished = "Finished"
@@ -36,13 +25,13 @@ class AsyncOperation: Operation {
 		}
 	}
 	
-	override var isAsynchronous: Bool { return true }
+	override open var isAsynchronous: Bool { return true }
 	
-	override var isReady: Bool { return super.isReady && self.state == .ready }
-	override var isExecuting: Bool { return self.state == .executing }
-	override var isFinished: Bool { return self.state == .finished }
+	override open var isReady: Bool { return super.isReady && self.state == .ready }
+	override open var isExecuting: Bool { return self.state == .executing }
+	override open var isFinished: Bool { return self.state == .finished }
 	
-	var state: State = .ready {
+	public final var state: State = .ready {
 		willSet {
 			willChangeValue(forKey: newValue.keyPath)
 			willChangeValue(forKey: state.keyPath)
@@ -52,7 +41,7 @@ class AsyncOperation: Operation {
 		}
 	}
 	
-	override func start() {
+	override open func start() {
 		if self.isCancelled {
 			self.state = .finished
 			return
@@ -62,7 +51,7 @@ class AsyncOperation: Operation {
 		self.state = .executing
 	}
 	
-	override func cancel() {
+	override open func cancel() {
 		self.state = .finished
 	}
 }
