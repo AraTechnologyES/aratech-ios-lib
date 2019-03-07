@@ -13,6 +13,7 @@
 		2E1497A81FC7004E00C635D1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1497A51FC7003800C635D1 /* Logger.swift */; };
 		2E1497A91FC7004E00C635D1 /* Severity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1497A61FC7003900C635D1 /* Severity.swift */; };
 		2E1497B11FC708CB00C635D1 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1497B01FC708CB00C635D1 /* Configurable.swift */; };
+		2E254F552231128000887ABD /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E254F542231128000887ABD /* Stylable.swift */; };
 		2E35A6CD213D7F4800AE24B8 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35A6CC213D7F4800AE24B8 /* Identifiable.swift */; };
 		2E3ADFB121A412EF00B3DA57 /* LoadResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ADFB021A412EF00B3DA57 /* LoadResourcesViewController.swift */; };
 		2E487CE42133FBC600B676CB /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E487CE32133FBC600B676CB /* UIImage+Resize.swift */; };
@@ -122,6 +123,7 @@
 		2E1497A51FC7003800C635D1 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		2E1497A61FC7003900C635D1 /* Severity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Severity.swift; sourceTree = "<group>"; };
 		2E1497B01FC708CB00C635D1 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		2E254F542231128000887ABD /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
 		2E35A6CC213D7F4800AE24B8 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		2E3ADFB021A412EF00B3DA57 /* LoadResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcesViewController.swift; sourceTree = "<group>"; };
 		2E487CE32133FBC600B676CB /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 		2E1497AA1FC706FD00C635D1 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				2E254F542231128000887ABD /* Stylable.swift */,
 				EA823BAF1DC79D1C0011F74D /* Style.swift */,
 				EA7950F91E5C6A90000C1F38 /* StyleApplicable.swift */,
 				EA7950FC1E5C760E000C1F38 /* ButtonStyle.swift */,
@@ -807,6 +810,7 @@
 				EA823BA81DC79C480011F74D /* UICollectionReusableView.swift in Sources */,
 				EA219E781E3210D1005DCB48 /* UITextView.swift in Sources */,
 				2E1277EB21AE7CF40023A80F /* NibLoadable.swift in Sources */,
+				2E254F552231128000887ABD /* Stylable.swift in Sources */,
 				EA3684871E5D7BA1003CEFC5 /* StyleableTextField.swift in Sources */,
 				2E3ADFB121A412EF00B3DA57 /* LoadResourcesViewController.swift in Sources */,
 				2E9085681F6278F70051BEA3 /* Dispatch.swift in Sources */,
