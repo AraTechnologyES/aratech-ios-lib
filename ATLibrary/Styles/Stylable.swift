@@ -3,7 +3,8 @@
 //  ATLibrary
 //
 //  Created by Nicolás Landa on 07/03/2019.
-//  
+//
+//  Credits: https://felginep.github.io/2019-02-19/uiview-styling-with-functions
 
 /**
 
