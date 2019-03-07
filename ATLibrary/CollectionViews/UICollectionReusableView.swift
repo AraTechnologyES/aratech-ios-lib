@@ -4,7 +4,7 @@
 
 import Foundation
 
-extension UICollectionReusableView: NibLoadableView { }
+extension UICollectionReusableView: NibCounterpartView { }
 
 extension UICollectionReusableView: ReusableView { }
 

@@ -4,7 +4,7 @@
 
 import Foundation
 
-extension UITableViewCell: NibLoadableView { }
+extension UITableViewCell: NibCounterpartView { }
 
 extension UITableViewCell: ReusableView { }
 

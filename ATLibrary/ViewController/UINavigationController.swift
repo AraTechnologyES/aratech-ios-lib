@@ -22,3 +22,14 @@ public extension UINavigationController {
         navigationBar.shadowImage = UINavigationBar.appearance().shadowImage
     }
 }
+
+public extension UINavigationItem {
+	
+	/// Establece el título del botón de atrás
+	///
+	/// - Parameter title: Título del botón de atrás
+	func setBackButtonItemTitle(_ title: String?) {
+		guard let title = title else { return }
+		self.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
+	}
+}

@@ -49,7 +49,7 @@ open class AsyncImageFetcher {
         serialAccessQueue.maxConcurrentOperationCount = 1
     }
 
-    // MARK: Object fetching
+    // MARK:- Object fetching
 
     /**
      Asynchronously fetches data for a specified `UUID`.
@@ -93,8 +93,65 @@ open class AsyncImageFetcher {
             self.completionHandlers[identifier] = nil
         }
     }
+	
+	// MARK: - Helpers
+	
+	/// Sets the image from the url asynchronously
+	///
+	/// - Parameters:
+	///   - url: Url from the image to set
+	///   - cell: `UITableViewCell` to put the image in
+	///   - keyPath: `KeyPath` where the image is set
+	public func async<Cell: UITableViewCell>(
+		set url: URL,
+		into cell: Cell,
+		imagePath keyPath: ReferenceWritableKeyPath<Cell, UIImage?>) {
+		if let image = self.fetchedData(for: url) {
+			cell[keyPath: keyPath] = image
+		} else {
+			self.fetchAsync(url) { image in
+				execute(in: .main) {
+					cell[keyPath: keyPath] = image
+				}
+			}
+		}
+	}
+	
+	/// Sets the image from the url asynchronously animating alpha
+	///
+	/// - Parameters:
+	///   - url: Url from the image to set
+	///   - cell: `UITableViewCell` to put the image in
+	///   - keyPath: `KeyPath` from the `UIImageView` where the image is set
+	public func async<Cell: UITableViewCell, ImageView: UIImageView>(
+		set url: URL,
+		into cell: Cell,
+		imageViewPath keyPath: KeyPath<Cell, ImageView>) {
+		
+		let referencedImageView = cell[keyPath: keyPath]
+		async(set: url, into: referencedImageView)
+	}
+	
+	/// Sets the image from the url asynchronously animating alpha
+	///
+	/// - Parameters:
+	///   - url: Url from the image to set
+	///   - imageView: Image View to set the image in
+	public func async(
+		set url: URL,
+		into imageView: UIImageView) {
+		if let image = self.fetchedData(for: url) {
+			imageView.animated(set: image, duration: 0.0)
+		} else {
+			self.fetchAsync(url) { image in
+				execute(in: .main) {
+					imageView.animated(set: image)
+				}
+			}
+		}
+	}
 
-    // MARK: Convenience
+    // MARK:- Convenience
     
     /**
      Begins fetching data for the provided `identifier` invoking the associated
