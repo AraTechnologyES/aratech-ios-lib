@@ -6,5 +6,5 @@ Pod::Spec.new do |spec|
   spec.homepage		= "https://github.com/AraTechnologyES/aratech-ios-lib"
   spec.authors		= { 'Nicolas Landa' => 'machukkas@gmail.com' }
   spec.source		= { :git => 'https://github.com/AraTechnologyES/aratech-ios-lib.git' }
-  spec.source_files	= 'ATLibrary/*'
+  spec.source_files	= 'ATLibrary/*.swift'
 end
