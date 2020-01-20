@@ -4,3 +4,4 @@ Pod::Spec.new do |s|
      s.summary      = "Utilities."
      s.description  = "Many utilities i use a lot"
      s.homepage     = "https://github.com/AraTechnologyES/aratech-ios-lib"
+end
