@@ -32,7 +32,9 @@ open class AsyncImageFetcher {
 	
 	private static let sharedUrlCache: URLCache =
 		URLCache(memoryCapacity: 1024*1024*50, diskCapacity: 1024*1024*25, diskPath: "com.aratech.atlibrary.AsyncImageFetcher")
-	
+
+	public static let shared: AsyncImageFetcher = AsyncImageFetcher()
+
     // MARK: Initialization
 
 	public init() {
@@ -109,9 +111,9 @@ open class AsyncImageFetcher {
 		if let image = self.fetchedData(for: url) {
 			cell[keyPath: keyPath] = image
 		} else {
-			self.fetchAsync(url) { image in
+			self.fetchAsync(url) { [weak cell] image in
 				execute(in: .main) {
-					cell[keyPath: keyPath] = image
+					cell?[keyPath: keyPath] = image
 				}
 			}
 		}
@@ -143,9 +145,9 @@ open class AsyncImageFetcher {
 		if let image = self.fetchedData(for: url) {
 			imageView.animated(set: image, duration: 0.0)
 		} else {
-			self.fetchAsync(url) { image in
+			self.fetchAsync(url) { [weak imageView] image in
 				execute(in: .main) {
-					imageView.animated(set: image)
+					imageView?.animated(set: image)
 				}
 			}
 		}
