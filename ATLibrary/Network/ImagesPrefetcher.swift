@@ -11,7 +11,7 @@ public protocol ImageURLHolder {
 open class ImagesPrefetcher<Model: NSManagedObject>: NSObject where Model: ImageURLHolder {
 	
 	private let imageFetcher: AsyncImageFetcher
-	private let resultsController: NSFetchedResultsController<Model>
+	private weak var resultsController: NSFetchedResultsController<Model>?
 	
 	public init(imageFetcher: AsyncImageFetcher, resultsController: NSFetchedResultsController<Model>) {
 		self.imageFetcher = imageFetcher
@@ -19,6 +19,7 @@ open class ImagesPrefetcher<Model: NSManagedObject>: NSObject where Model: Image
 	}
 	
 	func prefetch(at indexPaths: [IndexPath]) {
+		guard let resultsController = self.resultsController else { return }
 		for indexPath in indexPaths {
 			let object = resultsController.object(at: indexPath)
 			imageFetcher.fetchAsync(object[keyPath: object.imageURLKeyPath])
@@ -26,6 +27,7 @@ open class ImagesPrefetcher<Model: NSManagedObject>: NSObject where Model: Image
 	}
 	
 	func cancelPrefetch(at indexPaths: [IndexPath]) {
+		guard let resultsController = self.resultsController else { return }
 		for indexPath in indexPaths {
 			let object = resultsController.object(at: indexPath)
 			imageFetcher.cancelFetch(object[keyPath: object.imageURLKeyPath])
