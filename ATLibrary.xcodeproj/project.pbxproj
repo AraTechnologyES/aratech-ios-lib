@@ -37,6 +37,7 @@
 		2EBB78D01EF3ABC900E65F78 /* GenericTableViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */; };
 		2EC347B121E5135100B6602A /* UIImage+SetAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC347B021E5135100B6602A /* UIImage+SetAnimated.swift */; };
 		2EC347CE21E60D1E00B6602A /* NotificationName+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC347CD21E60D1E00B6602A /* NotificationName+Network.swift */; };
+		2ECAEF8E2237A52200DB7B21 /* AlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAEF8D2237A52200DB7B21 /* AlertController+Extension.swift */; };
 		2ED3CDF7209303CF00E0CE87 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED3CDF6209303CF00E0CE87 /* CALayer+Shadow.swift */; };
 		2ED3CDFA209308D200E0CE87 /* CALayer+ShadowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED3CDF9209308D200E0CE87 /* CALayer+ShadowTests.swift */; };
 		2ED835D62090DBFE004C9F21 /* GradientShadowRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED835D52090DBFE004C9F21 /* GradientShadowRoundedView.swift */; };
@@ -145,6 +146,7 @@
 		2EB9D84E212EA71C00222BE2 /* ActivityIndicator+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicator+Loading.swift"; sourceTree = "<group>"; };
 		2EC347B021E5135100B6602A /* UIImage+SetAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SetAnimated.swift"; sourceTree = "<group>"; };
 		2EC347CD21E60D1E00B6602A /* NotificationName+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Network.swift"; sourceTree = "<group>"; };
+		2ECAEF8D2237A52200DB7B21 /* AlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController+Extension.swift"; sourceTree = "<group>"; };
 		2ECC2F911EEFFEE100658D87 /* GenericTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
 		2ECC2F921EEFFEE100658D87 /* GenericTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewController.xib; sourceTree = "<group>"; };
 		2ED3CDF6209303CF00E0CE87 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
@@ -426,6 +428,14 @@
 			path = ActivityIndicator;
 			sourceTree = "<group>";
 		};
+		2ECAEF8C2237A4FC00DB7B21 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAEF8D2237A52200DB7B21 /* AlertController+Extension.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		2ED3CDF52093035700E0CE87 /* Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +556,7 @@
 			children = (
 				2E74BA2121B6EC6E00262855 /* Window.swift */,
 				2EB9D84D212EA6F300222BE2 /* ActivityIndicator */,
+				2ECAEF8C2237A4FC00DB7B21 /* Alert */,
 				2E1497B61FC71D9300C635D1 /* Animations */,
 				2E1497AD1FC707E100C635D1 /* Assets */,
 				2E1497AF1FC7083400C635D1 /* CollectionViews */,
@@ -794,6 +805,7 @@
 				EA823BB21DC79E6E0011F74D /* Sandbox.swift in Sources */,
 				EAF958D21E37761B00EC2FCB /* UIColor.swift in Sources */,
 				2E8A918D21466F6A005B7916 /* AsyncImageFetcher.swift in Sources */,
+				2ECAEF8E2237A52200DB7B21 /* AlertController+Extension.swift in Sources */,
 				2E1497A71FC7004E00C635D1 /* AppMode.swift in Sources */,
 				2E9981D21EC4A45E00DBCBE4 /* ExpandAnimationManager.swift in Sources */,
 				EA823BAA1DC79C690011F74D /* UITableView.swift in Sources */,
