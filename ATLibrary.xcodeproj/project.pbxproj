@@ -703,10 +703,9 @@
 			};
 			buildConfigurationList = EA823B701DC798A80011F74D /* Build configuration list for PBXProject "ATLibrary" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
