@@ -40,7 +40,7 @@ open class LoadResourcesViewController: UIViewController {
 	override open func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		dispathGroup.notify(queue: .main) {
+		dispathGroup.notify(queue: .main) { [unowned self] in
 			self.activityIndicator.stopAnimating()
 			self.resourcesLoaded()
 		}
